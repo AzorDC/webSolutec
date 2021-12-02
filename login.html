@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SoluTec</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog Template">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
+    <link rel="shortcut icon" href="./solutec.ico">
+
+    <!-- FontAwesome JS-->
+    <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme-7.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+
+    <!-- JQUERY -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-dark">
+            <a href="./index.html"> <img src="./assets/images/solutec.png" alt="SoluTec" class="logo-navbar"> </a>
+            <div class="navbar-item">
+                <a href="./index.html" class="nav-link">
+                    <h6 class="list-group-item">Home</h6>
+                </a>
+                <a href="./blog-list.html" class="nav-link">
+                    <h6 class="list-group-item">Cursos</h6>
+                </a>
+                <a href="#" class="nav-link">
+                    <h6 class="list-group-item">Sobre nosotros</h6>
+                </a>
+                <a href="./login.html" class="nav-link">
+                    <h6 class="list-group-item">Iniciar sesión</h6>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div id="alert-zone" class="alert-zone"></div>
+        <div class="wrapper fadeInDown">            
+            <div id="formContent">
+              <!-- Tabs Titles -->
+              <a href="#">
+                <h2 class="active">Iniciar sesión</h2>
+              </a>
+              <a href="./register.html">
+                <h2 class="inactive underlineHover">Registrarse</h2>
+              </a>
+                        
+              <!-- Login Form -->
+              <div>
+                <input type="text" id="login" class="fadeIn second" name="login" placeholder="Usuario">
+                <input type="password" id="password" class="fadeIn third" name="login" placeholder="Contraseña">
+                <br> <br>
+                <button class="fadeIn fourth btn btn-primary" onclick="LogIn()">Iniciar sesión</button>
+                <br> <br>
+                <script src="./javascript/login.js"></script>
+              </div>
+            </div>
+          </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tema 4. Herramientas y compilación del código</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog Template">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
+    <link rel="shortcut icon" href="../../../solutec.ico">
+
+    <!-- FontAwesome JS-->
+    <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="../../../assets/css/theme-7.css">
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-dark">
+            <a href="../../../index.html"> <img src="../../../assets/images/solutec.png" alt="SoluTec" class="logo-navbar"> </a>
+            <div class="navbar-item" id="nav-items">                
+                <script src='../../javascript/header.js'></script>
+            </div>
+        </nav>
+    </header>
+
+    <div class="header">
+        <h3 class="text-center text-white titulo-indice">ÍNDICE</h3>
+        <ol class="temas">
+            <!-- TEMA 1 MODALIDADES DE OPERACION-->
+            <li class="tema">
+                <a href="../Tema 1/1_1.html" class="tema-indice">Modalidades de operación.</a>
+                <!-- SUBTEMAS-->
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 1/1_1.html" class="tema-indice">
+							              1.1. Modo de dirección real
+						            </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 1/1_2.html" class="tema-indice">
+							              1.2. Modo protegido.
+						            </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- TEMA 2 ORGANIZACION DE LA MEMORIA-->
+            <li class="tema">
+                <a href="../Tema 2/2_1.html" class="tema-indice"> Organización de la memoria. </a>
+
+                <!-- SUBTEMAS -->
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 2/2_1.html" class="tema-indice">
+							              2.1. Segmentos.
+						            </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 2/2_2.html" class="tema-indice">
+                            2.2. Endianess.
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- TEMA 3 REGISTROS DEL PROCESADOR-->
+            <li class="tema">
+                <a href="../Tema 3/3_1.html" class="tema-indice">Registros del procesador</a>
+
+                <!-- SUBTEMAS -->
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 3/3_1.html" class="tema-indice">
+                            3.1. Registros del 8088 y del 8086.
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- TEMA 4 HERRAMIENTAS Y ESTRUCTURA DEL CODIGO-->
+            <li class="tema">
+                <a href="../Tema 4/4_1.html" class="tema-indice">Preparacion para Ensamblador</a>
+
+                <!-- SUBTEMAS -->
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 4/4_1.html" class="tema-indice">
+                            4.1. Herramientas y compilación del código.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 4/4_2.html" class="tema-indice">
+                            4.2. Estructura del codigo.
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- TEMA 5. lENGUAJE ENSAMBLADOR-->
+            <li class="tema">
+                <a href="../Tema 5/5_1.html" class="tema-indice">Ensamblador</a>
+
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 5/5_1.html" class="tema-indice">
+                            5.1. Variables y operadores.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 5/5_2.html" class="tema-indice">
+                            5.2. Instrucciones.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 5/5_3.html" class="tema-indice">
+                            5.3. Conjuntos de instrucciones comunes.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 5/5_4.html" class="tema-indice">
+                            5.4. Códigos.
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+    <div class="main-wrapper"> <!-- MAIN -->
+
+        <article class="blog-post px-3 py-5 p-md-5"> <!-- INICIO ARTICULO -->
+            <div class="container"><!-- CONTENEDOR PRINC-->
+                <header class="blog-post-header"><!-- TIUTLO -->
+                    <h2 class="title mb-2">4.1 Herramientas</h2> <!-- TEMA PRINCIPAL -->
+                    <div class="meta mb-3"><span class="date">12 de noviembre de 2021</span></div> <!-- FECHA -->
+                </header><!-- FIN TITULO -->
+
+                <p><!-- INTRODUCCION HERRAMIENTAS-->
+                    Para programar en ensamblador, se requieren de 3 herramientas principales:
+                </p><!-- FIN INTRODUCCION SEGMENTOS -->
+
+                <ul class="mb-5">
+                    <li class="mb-2">Paquete ensamblador (MASM).</li>
+                    <li class="mb-2">Compilador (Windows XP).</li>
+                    <li class="mb-2">Editor (Editor de texto).</li>
+                </ul>
+
+                <h5 class="my-3">MASM</h5><!-- SUBTEMA 1 -->
+
+                <p><!-- DESCRIPCION MASM-->
+                    MASM es el paquete de ensamblador de Microsoft, este paquete contiene todo lo necesario para generar los archivos de la aplicación, estos archivos son los .obj y los .exe, este último es el que se ejecutara en la consola.
+                </p><!-- FIN DESCRIPCION MASM -->
+
+                <h5 class="my-3">Windows XP</h5>
+                <p><!-- DESCRIPCION WINDOWS XP-->
+                  El sistema operativo Windows XP fungirá como compilador, por lo que será necesario una máquina virtual con ese sistema. Windows XP será utilizado con regularidad, básicamente cada vez que se quiera compilar una aplicación se debe usar Windows XP, por lo que se debe tener fácil acceso a este, es por eso que se recomienda usar una máquina virtual.
+                </p><!-- FIN DESCRIPCION WINDOWS XP-->
+
+                <h5 class="my-3">Editor</h5>
+                <p><!-- DESCRIPCION EDITOR-->
+                  Cualquier editor, como block de notas, notepad, etc, es suficiente para escribir el código ensamblador. La extensión de los archivos de código fuente de ensamblador es .asm, por lo que estos archivos siempre deberán ser guardados con esta extensión. También se puede usar el editor de texto de la consola de Windows XP y de esta forma se puede ir familiarizando con esta.
+                </p><!-- FIN DESCRIPCION EDITOR-->
+
+                <h3 class="mt-5 mb-3">Compilación del código</h3>
+                <p><!-- REQUISITOS COMPILACION -->
+                  Para compilar el código es necesario estar en Windows XP y tener estos archivos disponibles:
+                </p>
+                <ul class="mb-5">
+                    <li class="mb-2">El MASM.</li>
+                    <li class="mb-2">El archivo del código fuente (.asm).</li>
+                </ul><!-- FIN REQUISITOS COMPILACION -->
+                <p><!-- PRIMER COMANDO -->
+                  Una vez que se tiene el MASM y el código fuente en la máquina virtual (Windows XP), se debe abrir el símbolo del sistema (consola, cmd, etc.), mediante la consola se debe situar en la carpeta del MASM y una vez ahí se deben escribir las siguientes líneas de comando:
+                </p>
+                <p class="text-center">
+                  MASM [opciones] arch_fuente[,[arch_obj][,[arch_lst][,[arch_ref]]]][;]
+                </p><!-- FIN PRIMER COMANDO -->
+                <ul class="mb-5" ><!-- DESCRIPCION COMANDO -->
+                    <li class="mb-2">[opciones]: en este campo se pueden colocar las siguientes opciones:</li>
+                    <ul class="mb-2"><!-- DESCRIPCION OPCIONES -->
+                        <li class="mb-2">/V : si se quiere información adicional de ensambldo (numero de líneas, símbolos procesdos).</li>
+                        <li class="mb-2">/Z: muestra las líneas que tienen errores y una descripción del problema.</li>
+                        <li class="mb-2">/ZI: si se quiere usar el CodeView con esa aplicación.</li>
+                    </ul><!-- FIN DESCRIPCION OPCIONES -->
+                    <li class="mb-2">arch_fuente: nombre del archivo fuente o la ruta de este.</li>
+                    <li class="mb-2">,[arch_obj]: aquí se indica el nombre que tendrá el archivo .obj (Objeto) generado.</li>
+                    <li class="mb-2">,[arch_lst]: aquí se indica el nombre que tendrá el archivo .lst (Listado) generado.</li>
+                    <li class="mb-2">,[arch_ref]: aquí se indica el nombre que tendrá el archivo .ref (Referencias cruzadas) generado.</li>
+                    <li class="mb-2">,[;]: punto y coma para marcar el fin del comando.</li>
+                </ul><!-- FIN DESCRIPCION COMANDO -->
+
+                <p><!-- PRIMER COMANDO EJEMPLO-->
+                  Un ejemplo usando todas las opciones y el mismo nombre para los archivos nuevos sería:
+                </p>
+                <p class="text-center mb-5">
+                  MASM /ZI /V /Z appSuma,,,;
+                </p>
+                <p>
+                  En la línea anterior se indica que se quiere usar el CodeView en ese codigo (/ZI), se va a generar el archivo obj (primera coma), el archivo .lst (segunda coma) y el archivo .rfc (tercera coma). Si no se les da un nombre a los archivos generados, se tomará el mismo del archivo fuente. De todos estos archivos, el único que se usa para generar la aplicación es el .obj, por lo que si solo se quiere generar el archivo .obj se escribe:
+                </p>
+                <p class="text-center mb-5">
+                  MASM appSuma;
+                </p><!-- FIN PRIMER COMANDO EJEMPLO-->
+                <p>
+                  Una vez que se tiene el archivo .obj, se debe escribir la siguiente línea, con esta se enlaza el archivo .obj con los módulos de las librerías:
+                </p><!-- SEGUNDO COMANDO EJEMPLO-->
+                <p class="text-center mb-5">
+                  LINK [opciones] arch_obj [,[arch_exe] [,[arch_map] [,[arch_lib]]]] [;]
+                </p>
+                <p>
+                  Las partes de este comando funcionan de la misma manera que las del anterior, las opciones son:
+                </p>
+                <ul class="mb-5" ><!-- DESCRIPCION COMANDO -->
+                    <li class="mb-2">/CO: es obligatorio usar esta opción cuando se usó /ZI en el comando anterior.</li>
+                    <li class="mb-2">/HELP: para mostrar la ayuda.</li>
+                </ul>
+                <p>
+                  Si se desea asignar un nombre diferente al archivo .exe, se escribe la primera coma seguido del nombre, lo mismo para el map y el lib.
+                </p>
+                <p>
+                  Siguiendo con el ejemplo anterior, si se quiere usar todas las opciones el comando sería:
+                </p>
+                <p class="text-center mb-5">
+                  LINK /CO appSuma,,,librería_mat;
+                </p>
+                <p>
+                  En este caso, se debe agregar el nombre de la librería que se va a agregar, si solo se quiere enlazar normalmente sin ninguna opción extra se escribe:
+                </p>
+                <p class="text-center mb-5">
+                  LINK appSuma;
+                </p><!-- FIN PRIMER COMANDO EJEMPLO-->
+
+                <p><!-- RECOMENDACIION IDE-->
+                  Escribir estos comandos es necesario cada vez que se quiera compilar el código, por lo que cada vez que se detecta un error habría que corregirlo, volver a crear el .obj y volver a enlazarlo con LINK, sin embargo, para evitar todo este proceso se puede usar el IDE “GUI Turbo Assembler”.
+                </p><!-- FIN RECOMENDACIION IDE-->
+
+                <h5 class="my-3">GUI Turbo Assembler</h5>
+                <p><!-- TURBO ASSEMBLER DESCRIPCION-->
+                  Es un IDE como cualquier otro, pero para ensamblador, en este puedes escribir tu código y compilarlo rápidamente simplemente dando clic al botón compilar, es compatible con instrucciones de varios procesadores por lo que la gran mayoría de instrucciones van a ser aceptadas, sin embargo, es recomendable que cada vez que se haga un avance importante en el código, el avance sea significativo o se use una nueva instrucción, se compile el código desde la máquina virtual con el MASM ya que algunas instrucciones se pueden comportar de manera diferente a como se comportaban cuando compiló con el IDE, este diferente comportamiento puede causar errores a la hora de usar la aplicación, es por eso que se recomienda compilar con el MASM de vez en cuando.
+                </p><!-- FIN TURBO ASSEMBLER DESCRIPCION-->
+
+                <h5 class="my-3">Lo que hay que recordar:</h5>
+                <ul class="mb-5">
+                    <li class="mb-2">Se debe tener un Windows XP disponible para poder compilar el código.</li>
+                    <li class="mb-2">La extensión del archivo fuente debe ser .asm.</li>
+                    <li class="mb-2">Siempre que se use /ZI en el comando MASM, se debe usar /CO en el comando LINK.</li>
+                    <li class="mb-2">Si se usa Turbo Assembler para el desarrollo de la aplicación, siempre hacer pruebas también compilando la aplicación con MASM.</li>
+                </ul>
+
+                <nav class="blog-nav nav nav-justified my-5">
+                    <a class="nav-link-prev nav-item nav-link rounded-left" href="../Tema 3/3_1.html">Anterior<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
+                    <a class="nav-link-next nav-item nav-link rounded-right" href="4_2.html">Siguiente<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
+                </nav>
+            </div>
+        </article>
+
+
+        <footer class="footer text-center py-2 theme-bg-dark">
+
+            <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
+            <small class="copyright">Designed with <i class="fas fa-heart" style="color: #fb866a;"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+
+        </footer>
+
+    </div>
+
+    <!-- Javascript -->
+    <script src="assets/plugins/jquery-3.3.1.min.js"></script>
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+</body>

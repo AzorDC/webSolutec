@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tema 5. Ensamblador</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog Template">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
+    <link rel="shortcut icon" href="../../../solutec.ico">
+
+    <!-- FontAwesome JS-->
+    <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="../../../assets/css/theme-7.css">
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-dark">
+            <a href="../../../index.html"> <img src="../../../assets/images/solutec.png" alt="SoluTec" class="logo-navbar"> </a>
+            <div class="navbar-item" id="nav-items">                
+                <script src='../../javascript/header.js'></script>
+            </div>
+        </nav>
+    </header>
+
+    <div class="header">
+        <h3 class="text-center text-white titulo-indice">ÍNDICE</h3>
+        <ol class="temas">
+            <!-- TEMA 1 MODALIDADES DE OPERACION-->
+            <li class="tema">
+                <a href="../Tema 1/1_1.html" class="tema-indice">Modalidades de operación.</a>
+                <!-- SUBTEMAS-->
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 1/1_1.html" class="tema-indice">
+							              1.1. Modo de dirección real
+						            </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 1/1_2.html" class="tema-indice">
+							              1.2. Modo protegido.
+						            </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- TEMA 2 ORGANIZACION DE LA MEMORIA-->
+            <li class="tema">
+                <a href="../Tema 2/2_1.html" class="tema-indice"> Organización de la memoria. </a>
+
+                <!-- SUBTEMAS -->
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 2/2_1.html" class="tema-indice">
+							              2.1. Segmentos.
+						            </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 2/2_2.html" class="tema-indice">
+                            2.2. Endianess.
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- TEMA 3 REGISTROS DEL PROCESADOR-->
+            <li class="tema">
+                <a href="../Tema 3/3_1.html" class="tema-indice">Registros del procesador</a>
+
+                <!-- SUBTEMAS -->
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 3/3_1.html" class="tema-indice">
+                            3.1. Registros del 8088 y del 8086.
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- TEMA 4 HERRAMIENTAS Y ESTRUCTURA DEL CODIGO-->
+            <li class="tema">
+                <a href="../Tema 4/4_1.html" class="tema-indice">Preparacion para Ensamblador</a>
+
+                <!-- SUBTEMAS -->
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 4/4_1.html" class="tema-indice">
+                            4.1. Herramientas y compilación del código.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 4/4_2.html" class="tema-indice">
+                            4.2. Estructura del codigo.
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- TEMA 5. lENGUAJE ENSAMBLADOR-->
+            <li class="tema">
+                <a href="../Tema 5/5_1.html" class="tema-indice">Ensamblador</a>
+
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 5/5_1.html" class="tema-indice">
+                            5.1. Variables y operadores.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 5/5_2.html" class="tema-indice">
+                            5.2. Instrucciones.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 5/5_3.html" class="tema-indice">
+                            5.3. Conjuntos de instrucciones comunes.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 5/5_4.html" class="tema-indice">
+                            5.4. Códigos.
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+    <div class="main-wrapper"> <!-- MAIN -->
+
+        <article class="blog-post px-3 py-5 p-md-5"> <!-- INICIO ARTICULO -->
+            <div class="container"><!-- CONTENEDOR PRINC-->
+                <header class="blog-post-header"><!-- TIUTLO -->
+                    <h2 class="title mb-2">5.1 Variables y operadores</h2> <!-- TEMA PRINCIPAL -->
+                    <div class="meta mb-3"><span class="date">12 de noviembre de 2021</span></div> <!-- FECHA -->
+                </header><!-- FIN TITULO -->
+
+                <!--  DEFINICION DE VARIABLES-->
+                <h3 class="mt-5 mb-3">Definición de variables</h3>
+                <p><!-- INTRODUCCION VARIABLES-->
+                    En ensamblador existen 6 diferentes directivas con sus respectivos tamaños para definir variables, estos son:
+                </p><!-- FIN INTRODUCCION VARIABLES -->
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/directivas.png" alt="image"><!-- IMAGEN TABLA DIRECTIVAS -->
+                </figure><!-- FIN FIGURE -->
+                <p><!-- DEFINICION-->
+                    La directiva que se requiera usar depende del valor que se quiera declarar, por ejemplo, si se quiere declarar el número 100 decimal, es suficiente con usar DB ya que el número 100 (64h) ocupa 1 byte (dos dígitos hexadecimales). Las cadenas siempre se definen como DB, ya que cada letra ocupa 1 byte.
+                </p><!-- FIN DEFINICION-->
+                <p><!-- SINTAXIS-->
+                    La sintaxis para definir una variable es la siguiente:
+                </P>
+                <p class="text-center">
+                  nombre_variable directiva valor
+                </p>
+                <p>
+                    Por ejemplo:
+                </P>
+                <pre>
+                  <code>
+                                      mensaje DB “Hola Mundo”
+                                      numero EQU 100
+                                      length_mensaje EQU $ - mensaje
+                                      arreglo DW 4 DUP(?)
+                  </code>
+                </pre>
+                <p>
+                    La directiva EQ sirve para definir constantes y al asignarle el valor “$ - cadena” se obtiene la longitud de la cadena, esto es debido a que el operador “$” es el contador de localidad, por lo que coloca la dirección de inicio de la cadena y al restarle la misma cadena, se obtiene su longitud.
+                </P>
+                <p>
+                    El operador DUP reserva las localidades de memoria necesarias indicadas por la directiva y el número que le precede, en el ejemplo anterior, la varaible "arreglo" contiene 4 WORDS vacías reservadas, si se quieren reservar las localidades con un valor en específico, basta con colocarlo entre los paréntesis de DUP.
+                </P><!-- FIN SINTAXIS-->
+                <h5 class="my-3">Variables puntero</h5><!-- VARIABLES PUNTERO-->
+                <p>
+                    Estas variables contienen la dirección de un dato o código, en lugar del contenido de memoria en sí mismo, pueden ser NEAR o FAR, los NEAR solo contienen el offset de la dirección, estos pueden inicializarse con la directiva DW.
+                </P>
+                <p>
+                  Los FAR contienen tanto la dirección del segmento como la del offset, estos se pueden inicializar mediante la directiva DD. Ejemplo:
+                </P>
+                <pre>
+                  <code>
+                                       mensaje DB “Hola Mundo”
+                                       apunt_mensaje DW mensaje
+                                       apunt_mensajef DD mensaje
+                  </code>
+                </pre><!-- FIN VARIABLES PUNTERO-->
+
+                <h3 class="mt-5 mb-3">Operadores</h3><!-- OPERADORES-->
+                <p>
+                  En ensamblador se tienen operadores aritméticos, lógicos a nivel de bit, relacionales, de corrimiento y de tipo.
+                </p>
+                <h5 class="my-3">Aritméticos</h5><!-- ARITMETICOS-->
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/aritmeticos.png" alt="image"><!-- IMAGEN ARITMETICOS -->
+                </figure><!-- FIN FIGURE -->
+                <h5 class="my-3">Relacionales</h5><!-- RELACIONALES-->
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/relacionales.png" alt="image"><!-- IMAGEN RELACIONALES -->
+                </figure><!-- FIN FIGURE -->
+                <h5 class="my-3">Lógicos a nivel de bit</h5><!-- LOGICOS-->
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/logicos.png" alt="image"><!-- IMAGEN LOGICOS -->
+                </figure><!-- FIN FIGURE -->
+                <h5 class="my-3">Corrimiento</h5><!-- CORRIMIENTO-->
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/corrimiento.png" alt="image"><!-- IMAGEN CORRIMIENTO -->
+                </figure><!-- FIN FIGURE -->
+                <h5 class="my-3">De Tipo</h5><!-- DE TIPO-->
+                <h6 class="my-3">PTR</h6><!-- PTR-->
+                <p>
+                  El operador PTR toma los bytes indicados de la variable indicada.
+                </p>
+                <h6 class="text-center">
+                  tipo PTR variable
+                </h6>
+                <p>
+                  Para variables se puede usar los tipos BYTE, WORD, DWORD, FWORD, QWORD o TBYTE y para etiquetas NEAR, FAR, PROC.
+                </p>
+                <h6 class="my-3">SHORT</h6><!-- SHORT -->
+                <p>
+                  Indica que la etiqueta tiene un alcance corto (< a 128 bytes).
+                </p>
+                <h6 class="text-center">
+                  SHORT etiqueta
+                </h6>
+                <h6 class="my-3">THIS</h6><!-- THIS-->
+                <p>
+                  Crea un operando cuyo valor de su OFFSET y segmento es igual a la posición actual del operador y cuyo tipo es el especificado en la sintaxis del operador.
+                </p>
+                <h6 class="text-center">
+                  THIS tipo
+                </h6>
+                <p>
+                  Para variables se puede usar los tipos BYTE, WORD, DWORD, FWORD, QWORD o TBYTE y para etiquetas NEAR, FAR, PROC.
+                </p>
+                <h6 class="my-3">LOW Y HIGH</h6><!-- lOW Y HIGH-->
+                <p>
+                  HIGH regresa el byte más significativo de la expresión y LOW regresa el byte menos significativo de la expresión.
+                </p>
+                <h6 class="text-center">
+                  HIGH expresión
+                </h6>
+                <h6 class="text-center">
+                  LOW expresión
+                </h6>
+                <h6 class="my-3">SEG</h6><!-- SEG-->
+                <p>
+                  SEG regresa la dirección del segmento de una expresión.
+                </p>
+                <h6 class="text-center">
+                  SEG expresión
+                </h6>
+                <h6 class="my-3">OFFSET</h6><!-- OFFSET -->
+                <p>
+                  Regresa la dirección OFFSET de una expresión
+                </p>
+                <h6 class="text-center">
+                  OFFSET expresión
+                </h6>
+                <h6 class="my-3">TYPE</h6><!-- TYPE -->
+                <p>
+                  Regresa un número que representa el tipo de una expresión, cuando es una cadena regresa un 1, cuando es una constante regresa 0 y cuando es una estructura regresa el número de bytes en la estructura.
+                </p>
+                <h6 class="text-center">
+                  TYPE expresión
+                </h6>
+                <h6 class="my-3">LENGTH</h6><!-- LENGTH -->
+                <p>
+                  Regresa el número de elementos de un dato en un arreglo u otra variable definida con el operador DUP.
+                </p>
+                <h6 class="text-center">
+                  LENGTH variable
+                </h6>
+                <h6 class="my-3">SIZE</h6><!-- SIZE -->
+                <p>
+                  Regresa el número total de bytes proporcionados a un arreglo u otro tipo de variable definida con el operador DUP
+                </p>
+                <h6 class="text-center">
+                  SIZE variable
+                </h6>
+
+                <h5 class="my-3">Lo que hay que recordar:</h5>
+                <ul class="mb-5">
+                    <li class="mb-2">Las cadenas siempre se deben definir con la directiva DB.</li>
+                    <li class="mb-2">Para los arreglos es necesario usar el operador DUP.</li>
+                    <li class="mb-2">EQU $ - cad nos da la longitud de la cadena.</li>
+                    <li class="mb-2">Las variables puntero pueden obtener solo el offset con DW (NEAR) y con DD (FAR) el offset y el segmento.</li>
+                </ul>
+
+                <nav class="blog-nav nav nav-justified my-5">
+                    <a class="nav-link-prev nav-item nav-link rounded-left" href="../Tema 4/4_2.html">Anterior<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
+                    <a class="nav-link-next nav-item nav-link rounded-right" href="5_2.html">Siguiente<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
+                </nav>
+            </div>
+        </article>
+
+
+        <footer class="footer text-center py-2 theme-bg-dark">
+
+            <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
+            <small class="copyright">Designed with <i class="fas fa-heart" style="color: #fb866a;"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+
+        </footer>
+
+    </div>
+
+    <!-- Javascript -->
+    <script src="assets/plugins/jquery-3.3.1.min.js"></script>
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+</body>

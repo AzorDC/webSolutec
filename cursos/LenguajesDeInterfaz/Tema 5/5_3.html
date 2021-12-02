@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tema 5. Ensamblador</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog Template">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
+    <link rel="shortcut icon" href="../../../solutec.ico">
+
+    <!-- FontAwesome JS-->
+    <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="../../../assets/css/theme-7.css">
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-dark">
+            <a href="../../../index.html"> <img src="../../../assets/images/solutec.png" alt="SoluTec" class="logo-navbar"> </a>
+            <div class="navbar-item" id="nav-items">                
+                <script src='../../javascript/header.js'></script>
+            </div>
+        </nav>
+    </header>
+
+    <div class="header">
+        <h3 class="text-center text-white titulo-indice">ÍNDICE</h3>
+        <ol class="temas">
+            <!-- TEMA 1 MODALIDADES DE OPERACION-->
+            <li class="tema">
+                <a href="../Tema 1/1_1.html" class="tema-indice">Modalidades de operación.</a>
+                <!-- SUBTEMAS-->
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 1/1_1.html" class="tema-indice">
+							              1.1. Modo de dirección real
+						            </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 1/1_2.html" class="tema-indice">
+							              1.2. Modo protegido.
+						            </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- TEMA 2 ORGANIZACION DE LA MEMORIA-->
+            <li class="tema">
+                <a href="../Tema 2/2_1.html" class="tema-indice"> Organización de la memoria. </a>
+
+                <!-- SUBTEMAS -->
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 2/2_1.html" class="tema-indice">
+							              2.1. Segmentos.
+						            </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 2/2_2.html" class="tema-indice">
+                            2.2. Endianess.
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- TEMA 3 REGISTROS DEL PROCESADOR-->
+            <li class="tema">
+                <a href="../Tema 3/3_1.html" class="tema-indice">Registros del procesador</a>
+
+                <!-- SUBTEMAS -->
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 3/3_1.html" class="tema-indice">
+                            3.1. Registros del 8088 y del 8086.
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- TEMA 4 HERRAMIENTAS Y ESTRUCTURA DEL CODIGO-->
+            <li class="tema">
+                <a href="../Tema 4/4_1.html" class="tema-indice">Preparacion para Ensamblador</a>
+
+                <!-- SUBTEMAS -->
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 4/4_1.html" class="tema-indice">
+                            4.1. Herramientas y compilación del código.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 4/4_2.html" class="tema-indice">
+                            4.2. Estructura del codigo.
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- TEMA 5. lENGUAJE ENSAMBLADOR-->
+            <li class="tema">
+                <a href="../Tema 5/5_1.html" class="tema-indice">Ensamblador</a>
+
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 5/5_1.html" class="tema-indice">
+                            5.1. Variables y operadores.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 5/5_2.html" class="tema-indice">
+                            5.2. Instrucciones.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 5/5_3.html" class="tema-indice">
+                            5.3. Conjuntos de instrucciones comunes.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 5/5_4.html" class="tema-indice">
+                            5.4. Códigos.
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+    <div class="main-wrapper"> <!-- MAIN -->
+
+        <article class="blog-post px-3 py-5 p-md-5"> <!-- INICIO ARTICULO -->
+            <div class="container"><!-- CONTENEDOR PRINC-->
+                <header class="blog-post-header"><!-- TIUTLO -->
+                    <h2 class="title mb-2">5.3 Conjuntos de instrucciones comunes</h2> <!-- TEMA PRINCIPAL -->
+                    <div class="meta mb-3"><span class="date">12 de noviembre de 2021</span></div> <!-- FECHA -->
+                </header><!-- FIN TITULO -->
+
+                <p><!-- INTRODUCCION CONJUNTOS-->
+                  Normalmente, en los lenguajes de alto nivel solo se requiere una línea de código para realizar acciones como mostrar una cadena, recibir un dato, posicionar el cursor, etc. En ensamblador, hacer estar cosas requiere de un poco más de una línea de código y más de una instrucción, además, de algunos operandos.
+                </p>
+                <p>Muchas de estas acciones requieren del uso de interrupciones a las cuales, normalmente, se les indica que deben hacer colocando un valor que representa una función en el registro AX. Para saber más sobre las interrupciones, es necesario consultar el repertorio de interrupciones de los Intel 8086/8088/80286.</p>
+                <p>A continuación, se muestran algunos “conjuntos” de instrucciones con los que se realizan acciones comunes en todos los programas.</p>
+                <!-- FIN INTRODUCCION CONJUNTOS -->
+
+                <h5 class="my-3">Apuntar al segmento de datos</h5><!-- APUNTAR SEG. DATOS-->
+                <p>
+                  Estas instrucciones son obligatorias en todos los programas donde esté definido un segmento de datos, lo que se hace con estas es darle la dirección del segmento declarado al registro de segmento DS, esto para que el procesador pueda encontrar las variables que definimos en el segmento. Por este motivo, siempre debe ir al principio o, al menos, antes de usar una variable.
+                </p>
+                <p>En el caso de usar estructura simplificada se pone @data o @DATA</p>
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/apuntar.png" alt="image"><!-- IMAGEN TABLA DIRECTIVAS -->
+                </figure><!-- FIN FIGURE -->
+                <p>Si se usa la estándar, se coloca el nombre que se le dio al segmento</p>
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/apuntar2.png" alt="image"><!-- IMAGEN TABLA DIRECTIVAS -->
+                </figure><!-- FIN FIGURE -->
+
+                <h5 class="my-3">Terminar el programa</h5><!-- TERMINAR PROGRAMA-->
+                <p>
+                  Para terminar un programa, se debe usar la función 4C00h de la interrupción 21h, al ser la instrucción para terminar el programa, se debe poner al final del código. Lo que se hace aquí es colocar un 4Ch en la parte alta de AX y después llamar a la interrupción 21h, la cual, efectuara la función con el valor indicado en AX.
+                </p>
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/terminar.png" alt="image"><!-- IMAGEN TABLA DIRECTIVAS -->
+                </figure><!-- FIN FIGURE -->
+
+                <h5 class="my-3">Imprimir una cadena</h5><!-- IMPRIMIR CADENA-->
+                <p>
+                  Para imprimir una cadena se usa la función 9h de la interrupción 21h, esta función necesita que en DX se encuentre el offset de la cadena que se va a imprimir y que esta cadena termine con el signo “$”. Para conseguir el offset de la cadena se usa el operador OFFSET.
+                </p>
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/cadena.png" alt="image"><!-- IMAGEN TABLA DIRECTIVAS -->
+                </figure><!-- FIN FIGURE -->
+                <p>
+                  Si se quiere que después de imprimir la cadena se haga un salto de línea, se debe agregar un 10 decimal al inicio de la cadena y si se quiere el retorno de carro se agrega un 13.
+                </p>
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/saltolinea.png" alt="image"><!-- IMAGEN TABLA DIRECTIVAS -->
+                </figure><!-- FIN FIGURE -->
+                <p>
+                  Si solo se quiere dar un salto de línea o retornar el carro, se usan las siguientes instrucciones:
+                </p>
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/saltoretorno.png" alt="image"><!-- IMAGEN TABLA DIRECTIVAS -->
+                </figure><!-- FIN FIGURE -->
+                <h5 class="my-3">Limpiar la pantalla</h5><!-- LIMPIAR PANTALLA-->
+                <p>
+                  Para limpiar la pantalla se usa la interrupción 10h, la cual es encargada de los servicios de pantalla, con la función 00h se indica que se entrará en modo de video, después, con AL = 03h se indica que la resolución que se está manejando es de 80 columnas por 25 filas, la cual es la resolución default cuando se abre la consola del símbolo de sistema, si se está manejando otra resolución, probablemente se deba usar otra resolución, es decir, colocar un valor mayor en AL.
+                </p>
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/limpiar.png" alt="image"><!-- IMAGEN TABLA DIRECTIVAS -->
+                </figure><!-- FIN FIGURE -->
+                <h5 class="my-3">Posicionar cursor</h5><!-- POSICIONAR CURSOR-->
+                <p>
+                  Para posicionar el cursor en cualquier parte de la pantalla se usa la interrupción 10h y su función 02h, para indicar la fila y la columna donde se quiere colocar el cursor se usa el registro DX, DH = fila y DL = columna, además, en BX se indicar en que página se quiere posicionar el cursor, normalmente es la 0. Si se usa DX completo, los primeros 2 dígitos representan la fila y los últimos dos la columna.
+                </p>
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/cursor.png" alt="image"><!-- IMAGEN TABLA DIRECTIVAS -->
+                </figure><!-- FIN FIGURE -->
+                <h5 class="my-3">Captura desde el teclado</h5><!--CAPTURA TECLADO -->
+                <p>
+                  Para hacer una captura desde el teclado, se usa la interrupción 21h y su funcion 01h, la cual permite hacer una captura de un solo carácter mediante el teclado, el cual se guarda en AL, por lo que si se quiere capturar más de un carácter se debe crear un ciclo.
+                </p>
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/captura.png" alt="image"><!-- IMAGEN TABLA DIRECTIVAS -->
+                </figure><!-- FIN FIGURE -->
+                <p>
+                  El siguiente es un ejemplo del ciclo que se necesita para capturar una cadena de caracteres y guardarla en una variable para después mostrarla, para indicar que ya se terminó de capturar, se debe presionar la tecla “Enter”:
+                </p>
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/ciclo.png" alt="image"><!-- IMAGEN TABLA DIRECTIVAS -->
+                </figure><!-- FIN FIGURE -->
+                <p>
+                  Esto es lo que pasaría con “palabra” cada vez que se ingresa un carácter:
+                </p>
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/palabra.png" alt="image"><!-- IMAGEN TABLA DIRECTIVAS -->
+                </figure><!-- FIN FIGURE -->
+
+                <h5 class="my-3">Asignar color de texto y fondo</h5><!--ASIGNAR COLORES-->
+                <p>
+                  Para asignar un color al fondo y a la fuente se usa la función 06h de la interrupción 21h, esta función usa todos los registros, por lo que se deben de “limpiar” antes y después de usar esta función. En BH se indica el color de fondo y de fuente, el primer digito corresponde al color de fondo y el segundo al de fuente.
+                </p>
+                <p>
+                  DH y CH se encargan de las filas, en CH se indica la fila desde donde se quiere pintar y en DH hasta donde se quiere pintar.
+                </p>
+                <p>
+                  CL y DL se encargan de las columnas, en CL se indica desde que columna se quiere pintar y en DL hasta cual columna.
+                </p>
+                <p>
+                  Es recomendable usar las instrucciones para limpiar la pantalla antes de usar las instrucciones para asignar colores, de lo contrario, los colores no se comportarían como se espera. Además, también es recomendable limpiar el registro AX cada que se vayan a asignar colores.
+                </p>
+                <p>
+                  Las siguientes instrucciones indican que se va a pintar a partir de la fila 1 hasta la fila 1 (solo una fila) y desde la columna 0 hasta la columna 80 (50h), el color de fondo es azul (4) y el texto es blanco (7).
+                </p>
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/color.png" alt="image"><!-- IMAGEN TABLA DIRECTIVAS -->
+                </figure><!-- FIN FIGURE -->
+                <p>
+                  El siguiente es un código para pintar la bandera de Francia en medio de la pantalla.
+                </p>
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/francia.png" alt="image"><!-- IMAGEN TABLA DIRECTIVAS -->
+                </figure><!-- FIN FIGURE -->
+                <p>
+                  A continuación, se muestran los colores disponibles:
+                </p>
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/tablacolores.png" alt="image"><!-- IMAGEN TABLA DIRECTIVAS -->
+                </figure><!-- FIN FIGURE -->
+
+                <h5 class="my-3">Lo que hay que recordar:</h5>
+                <ul class="mb-5">
+                    <li class="mb-2">Se deben limpiar los registros antes de asignar colores, ademas de limpiar la pantalla para su correcto funcionamiento.</li>
+                    <li class="mb-2">Se debe agregar el simbolo "$" al final de una cadena para imprimirla.</li>
+                    <li class="mb-2">Para capturar una cadena es necesario crear un ciclo para capturar caracter por cararter.</li>
+                    <li class="mb-2">Las instrucciones para apuntar al segmento de datos son obligratorias para los codigos con un segmento de datos definido.</li>
+                </ul>
+
+                <nav class="blog-nav nav nav-justified my-5">
+                    <a class="nav-link-prev nav-item nav-link rounded-left" href="5_2.html">Anterior<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
+                    <a class="nav-link-next nav-item nav-link rounded-right" href="5_4.html">Siguiente<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
+                </nav>
+            </div>
+        </article>
+
+
+        <footer class="footer text-center py-2 theme-bg-dark">
+
+            <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
+            <small class="copyright">Designed with <i class="fas fa-heart" style="color: #fb866a;"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+
+        </footer>
+
+    </div>
+
+    <!-- Javascript -->
+    <script src="assets/plugins/jquery-3.3.1.min.js"></script>
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+</body>

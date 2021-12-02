@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tema 5. Ensamblador</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog Template">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
+    <link rel="shortcut icon" href="../../../solutec.ico">
+
+    <!-- FontAwesome JS-->
+    <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="../../../assets/css/theme-7.css">
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-dark">
+            <a href="../../../index.html"> <img src="../../../assets/images/solutec.png" alt="SoluTec" class="logo-navbar"> </a>
+            <div class="navbar-item" id="nav-items">                
+                <script src='../../javascript/header.js'></script>
+            </div>
+        </nav>
+    </header>
+
+    <div class="header">
+        <h3 class="text-center text-white titulo-indice">ÍNDICE</h3>
+        <ol class="temas">
+            <!-- TEMA 1 MODALIDADES DE OPERACION-->
+            <li class="tema">
+                <a href="../Tema 1/1_1.html" class="tema-indice">Modalidades de operación.</a>
+                <!-- SUBTEMAS-->
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 1/1_1.html" class="tema-indice">
+							              1.1. Modo de dirección real
+						            </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 1/1_2.html" class="tema-indice">
+							              1.2. Modo protegido.
+						            </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- TEMA 2 ORGANIZACION DE LA MEMORIA-->
+            <li class="tema">
+                <a href="../Tema 2/2_1.html" class="tema-indice"> Organización de la memoria. </a>
+
+                <!-- SUBTEMAS -->
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 2/2_1.html" class="tema-indice">
+							              2.1. Segmentos.
+						            </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 2/2_2.html" class="tema-indice">
+                            2.2. Endianess.
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- TEMA 3 REGISTROS DEL PROCESADOR-->
+            <li class="tema">
+                <a href="../Tema 3/3_1.html" class="tema-indice">Registros del procesador</a>
+
+                <!-- SUBTEMAS -->
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 3/3_1.html" class="tema-indice">
+                            3.1. Registros del 8088 y del 8086.
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- TEMA 4 HERRAMIENTAS Y ESTRUCTURA DEL CODIGO-->
+            <li class="tema">
+                <a href="../Tema 4/4_1.html" class="tema-indice">Preparacion para Ensamblador</a>
+
+                <!-- SUBTEMAS -->
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 4/4_1.html" class="tema-indice">
+                            4.1. Herramientas y compilación del código.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 4/4_2.html" class="tema-indice">
+                            4.2. Estructura del codigo.
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- TEMA 5. lENGUAJE ENSAMBLADOR-->
+            <li class="tema">
+                <a href="../Tema 5/5_1.html" class="tema-indice">Ensamblador</a>
+
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 5/5_1.html" class="tema-indice">
+                            5.1. Variables y operadores.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 5/5_2.html" class="tema-indice">
+                            5.2. Instrucciones.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 5/5_3.html" class="tema-indice">
+                            5.3. Conjuntos de instrucciones comunes.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 5/5_4.html" class="tema-indice">
+                            5.4. Códigos.
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+    <div class="main-wrapper"> <!-- MAIN -->
+
+        <article class="blog-post px-3 py-5 p-md-5"> <!-- INICIO ARTICULO -->
+            <div class="container"><!-- CONTENEDOR PRINC-->
+                <header class="blog-post-header"><!-- TIUTLO -->
+                    <h2 class="title mb-2">Códigos</h2> <!-- TEMA PRINCIPAL -->
+                    <div class="meta mb-3"><span class="date">12 de noviembre de 2021</span></div> <!-- FECHA -->
+                </header><!-- FIN TITULO -->
+                <p><!-- INTRODUCCION CODIGOS-->
+                    Los siguientes son códigos de ejemplo usando algunas de las instrucciones de los diferentes grupos.
+                </p><!-- FIN INTRODUCCION CODIGOS -->
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/cod1.png" alt="image"><!-- IMAGEN CODIGO 1 -->
+                </figure><!-- FIN FIGURE -->
+                <p>
+                  Lo que hace el código anterior es intercambiar el contenido de 2 localidades consecutivas de memoria. Se da el número de words a intercambiar en CX. Por ejemplo, las primer 2 localidades: 10h y 20h después del intercambio seria 20h y 10h. Así sucesivamente hasta que CX = 0.
+                </p>
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/cod2.png" alt="image"><!-- IMAGEN CODIGO 2 -->
+                </figure><!-- FIN FIGURE -->
+                <p>
+                  En el código anterior se están utilizando 2 operandos de 16 bits; uno es AX y el otro es un operando de memoria, por lo tanto, el resultado va a quedar en DX AX. Para pasar el resultado a la variable que lo almacena, como el resultado es de 32 bits debemos hacerlo por partes, para lo cual empleamos el operador PTR. Nótese que el resultado es tomado como positivo.
+                </p>
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/cod3.png" alt="image"><!-- IMAGEN CODIGO 3 -->
+                </figure><!-- FIN FIGURE -->
+                <p>
+                  Este programa muestra el numero almacenado en el segmento de DATOS en la pantalla en binario. El numero de bits a mostrar se lleva a cabo mediante la instrucción LOOP, se usa la funcion 2 de INT21H para mostrar un carácter en la pantalla.
+                </p>
+                <p>
+                  El algoritmo a usar es el siguiente: se coloca el numero a mostrar en el registro BL, para iniciar imprimiendo el MSB se hace una rotacion a la izquierda, con lo que el MSB queda en la posicion del LSB, el numero en tales condiciones se pasa a DL, pero antes de ejecutar la INT21h se le hace una mascara con 0000 0001, para tomar solo el bit de la primera posicion, el cual solo va a ser 0 ó 1, para mandar a la pantalla su valor ASCII, al valor restante se le suma 48 (ASCII del CERO) y se manda a la pantalla, en la ual aparecera un 1 o un 0.
+                </p>
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/cod4.png" alt="image"><!-- IMAGEN CODIGO 4 -->
+                </figure><!-- FIN FIGURE -->
+                <p>
+                  Este programa compara 2 cadenas, usando para ello básicamente 2 instrucciones de manejo de cadenas.
+                </p>
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/cod5.png" alt="image"><!-- IMAGEN CODIGO 5 -->
+                </figure><!-- FIN FIGURE -->
+                <p>
+                  FLD pone el stack del coprocesador el operando indicado, FADD suma el operando en memoria con el operando que se encuentra en el tope del STACK del coprocesador, el resultado lo deja en el tope de la pila del coprocesador y FSTP saca el operando del tope del stack del coprocesador y lo pone en memoria, en la dirección indicada por el operando.
+                </p>
+                <nav class="blog-nav nav nav-justified my-5">
+                    <a class="nav-link-prev nav-item nav-link rounded-left" href="5_3.html">Anterior<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
+                </nav>
+            </div>
+        </article>
+
+
+        <footer class="footer text-center py-2 theme-bg-dark">
+
+            <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
+            <small class="copyright">Designed with <i class="fas fa-heart" style="color: #fb866a;"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+
+        </footer>
+
+    </div>
+
+    <!-- Javascript -->
+    <script src="assets/plugins/jquery-3.3.1.min.js"></script>
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+</body>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tema 1. Modalidades de operación</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog Template">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
+    <link rel="shortcut icon" href="../../../solutec.ico">
+
+    <!-- FontAwesome JS-->
+    <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="../../../assets/css/theme-7.css">
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-dark">
+            <a href="../../../index.html"> <img src="../../../assets/images/solutec.png" alt="SoluTec" class="logo-navbar"> </a>
+            <div class="navbar-item" id="nav-items">                
+                <script src='../../javascript/header.js'></script>
+            </div>
+        </nav>
+    </header>
+
+    <div class="header">
+        <h3 class="text-center text-white titulo-indice">ÍNDICE</h3>
+        <ol class="temas">
+            <!-- TEMA 1 MODALIDADES DE OPERACION-->
+            <li class="tema">
+                <a href="../Tema 1/1_1.html" class="tema-indice">Modalidades de operación.</a>
+                <!-- SUBTEMAS-->
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 1/1_1.html" class="tema-indice">
+							              1.1. Modo de dirección real
+						            </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 1/1_2.html" class="tema-indice">
+							              1.2. Modo protegido.
+						            </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- TEMA 2 ORGANIZACION DE LA MEMORIA-->
+            <li class="tema">
+                <a href="../Tema 2/2_1.html" class="tema-indice"> Organización de la memoria. </a>
+
+                <!-- SUBTEMAS -->
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 2/2_1.html" class="tema-indice">
+							              2.1. Segmentos.
+						            </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 2/2_2.html" class="tema-indice">
+                            2.2. Endianess.
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- TEMA 3 REGISTROS DEL PROCESADOR-->
+            <li class="tema">
+                <a href="../Tema 3/3_1.html" class="tema-indice">Registros del procesador</a>
+
+                <!-- SUBTEMAS -->
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 3/3_1.html" class="tema-indice">
+                            3.1. Registros del 8088 y del 8086.
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- TEMA 4 HERRAMIENTAS Y ESTRUCTURA DEL CODIGO-->
+            <li class="tema">
+                <a href="../Tema 4/4_1.html" class="tema-indice">Preparacion para Ensamblador</a>
+
+                <!-- SUBTEMAS -->
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 4/4_1.html" class="tema-indice">
+                            4.1. Herramientas y compilación del código.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 4/4_2.html" class="tema-indice">
+                            4.2. Estructura del codigo.
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- TEMA 5. lENGUAJE ENSAMBLADOR-->
+            <li class="tema">
+                <a href="../Tema 5/5_1.html" class="tema-indice">Ensamblador</a>
+
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 5/5_1.html" class="tema-indice">
+                            5.1. Variables y operadores.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 5/5_2.html" class="tema-indice">
+                            5.2. Instrucciones.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 5/5_3.html" class="tema-indice">
+                            5.3. Conjuntos de instrucciones comunes.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 5/5_4.html" class="tema-indice">
+                            5.4. Códigos.
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+    <div class="main-wrapper"> <!-- MAIN -->
+
+        <article class="blog-post px-3 py-5 p-md-5"> <!-- INICIO ARTICULO -->
+            <div class="container"><!-- CONTENEDOR PRINC-->
+                <header class="blog-post-header"><!-- TIUTLO -->
+                    <h2 class="title mb-2">Modalidades de operacion</h2> <!-- TEMA PRINCIPAL -->
+                    <div class="meta mb-3"><span class="date">12 de noviembre de 2021</span></div> <!-- FECHA -->
+                </header><!-- FIN TITULO -->
+
+                <p><!-- INTRODUCCION A LOS MODOS DE OPERACION -->
+                    El procesador soporta numerosos modos de operación para código x86, sin embargo, no todas las instrucciones están disponibles en estos modos.
+                    Una parte del repertorio de instrucciones de 16bits está disponible en el modo real y en el modo protegido. Si bien, las instrucciones son
+                    similares en cada modo, cada uno de estos da distintas formas de acceso a memoria y así se da lugar a estrategias de programación diferentes.
+                </p><!-- FIN INTRODUCCION -->
+
+                <h2 class="title mb-2">1.1. Modo Real</h2><!-- SUBTEMA 1 -->
+
+                <p><!-- INTRODUCCION SUB1-->
+                    El modo real (o modo de dirección real) es un modo de operación para las CPUs de arquitectura x86. Este modo se caracteriza por 20 bits de espacio de direcciones segmentado (esto significa que solo se puede direccionar 1MB de memoria), acceso directo del software a las rutinas del BIOS y el
+                    hardware periférico, y no tiene conceptos de protección de memoria. Otra característica especial de este modo, es que permite la retrocompatibilidad,
+                    es decir, permite que el software viejo o antiguo pueda ser ejecutado en microprocesadores más nuevos.
+                </p><!-- FIN INTRODUCCION SUB1 -->
+
+                <h3 class="mt-5 mb-3">Segmentación</h3><!-- TITULO SUBTEMA 2 -->
+                <p><!-- INTRODUCCION SEGMENTACION-->
+                    La segmentación es una parte clave para entender el modo real y para entender la segmentación, se debe comenzar definiendo que es un segmento. Un segmento es un área especial en un programa que inicia en una localidad de memoria divisible entre 16 (10 hexadecimal). Un segmento pude ubicarse en cualquier lugar de la memoria, pero, en el modo real, su tamaño puede ser de hasta 64KB, aunque el espacio a ocupar lo determina el programa.
+                </p><!-- FIN INTRODUCCION SUB2 -->
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/segm.png" alt="image"><!-- IMAGEN SEGMENTOS -->
+                </figure><!-- FIN FIGURE -->
+
+                <P>
+                  Los segmentos del procesador son los siguientes:
+                </p>
+
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/tabla.png" alt="image"><!-- IMAGEN TABLA SEGMENTOS -->
+                </figure><!-- FIN FIGURE -->
+
+                <p>
+                  Cada segmento tiene una dirección inicial y para calcular de manera sencilla su dirección final, solo se debe sumar el hexadecimal FFFF (216) a su dirección inicial, por ejemplo:
+                </p>
+
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/tabla2.png" alt="image"><!-- IMAGEN TABLA SEGMENTOS -->
+                </figure><!-- FIN FIGURE -->
+                <!-- FIN SEGMENTACION -->
+
+                <h3 class="mt-5 mb-3">Dirección Real</h3><!-- TITULO SUBTEMA 3 -->
+                <p><!-- INTRODUCCION DIRECCION REAL -->
+                    Para poder acceder a un dato, en el modo real, se necesita una dirección real, esta dirección es un numero hexadecimal de 20bits que está formado por la dirección inicial del segmento y un desplazamiento, es decir, la dirección de la localidad de memoria donde está guardado el dato.
+                </p>
+                <p>
+                  Esta dirección real se consigue mediante una serie de operaciones aritméticas, empezando con una multiplicación y seguido de una suma, en el siguiente ejemplo se explica:
+                </p>
+                <p>
+                  Supongamos que queremos acceder al dato FFh del segmento CS presentado a continuación:
+                </p>
+
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/segcs.png" alt="image"><!-- IMAGEN SEGMENTO CS -->
+                </figure><!-- FIN FIGURE -->
+
+                <p>
+                  Como se puede apreciar en la imagen anterior, el dato tiene la dirección real 1F000h y para conseguir esta dirección, primero, se debe multiplicar la dirección base (1000h) del segmento CS (guardada en los registros de segmento), con el numero 16 pero en su representación hexadecimal, es decir, 10h. Esta operación es la conversión de 16b a 20b por lo que es muy importante y siempre se debe hacer primero y con los mismos operandos, dirección base y 10h:
+                </p>
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/calculo1.png" alt="image"><!-- IMAGEN DIRECCION INICIAL -->
+                </figure><!-- FIN FIGURE -->
+
+                <p>
+                  El resultado de esta operación sería la dirección inicial del segmento CS, ahora, se debe conseguir el desplazamiento. El desplazamiento se encuentra en los registros de desplazamiento, para CS, su registro de desplazamiento es IP, por lo que IP estaría apuntando a la dirección F000h. Una vez que se tiene la dirección inicial del segmento y su desplazamiento, se hace una suma:
+                </p>
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/calculo2.png" alt="image"><!-- IMAGEN DIRECCION REAL -->
+                </figure><!-- FIN FIGURE -->
+
+                <p>
+                  El valor 1F000h es la dirección real con la que podremos acceder al dato FF. La dirección real se puede escribir de dos formas; la primera, escribiendo la dirección base, dos puntos y el desplazamiento; la segunda, simplemente escribiendo el hexadecimal resultante de la suma, este debe ser de 20 bits:
+                </p>
+
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/direcreal.png" alt="image"><!-- IMAGEN DIRECCION REAL -->
+                </figure><!-- FIN FIGURE -->
+                <!-- FIN DIRECCION REAL -->
+
+                <h5 class="my-3">Lo que hay que recordar:</h5>
+                <ul class="mb-5">
+                    <li class="mb-2">La dirección real siempre es de 20bits.</li>
+                    <li class="mb-2">Se necesita una dirección inicial (de 20 bits) y un desplazamiento (de 16 bits) para calcular la dirección real (de 20 bits).</li>
+                    <li class="mb-2">No se deben cambiar los operandos de las operaciones ni el orden de estas.</li>
+                    <li class="mb-2">El orden de las operaciones siempre debe ser:</li>
+                    <ol class="mb-5">
+                        <li class="mb-2">Multiplicar la dirección base por 10h para conseguir la dirección inicial.</li>
+                        <li class="mb-2">Sumar a la dirección inicial (20 bits) el desplazamiento (de 16 bits) para conseguir la dirección real.</li>
+                    </ol>
+                </ul>
+
+                <nav class="blog-nav nav nav-justified my-5">
+                    <a class="nav-link-next nav-item nav-link rounded-right" href="1_2.html">Siguiente<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
+                </nav>
+            </div>
+        </article>
+
+
+        <footer class="footer text-center py-2 theme-bg-dark">
+
+            <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
+            <small class="copyright">Designed with <i class="fas fa-heart" style="color: #fb866a;"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+
+        </footer>
+
+    </div>
+
+    <!-- Javascript -->
+    <script src="assets/plugins/jquery-3.3.1.min.js"></script>
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+</body>

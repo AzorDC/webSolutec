@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tema 4. Herramientas y compilación del código</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog Template">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
+    <link rel="shortcut icon" href="../../../solutec.ico">
+
+    <!-- FontAwesome JS-->
+    <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="../../../assets/css/theme-7.css">
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-dark">
+            <a href="../../../index.html"> <img src="../../../assets/images/solutec.png" alt="SoluTec" class="logo-navbar"> </a>
+            <div class="navbar-item" id="nav-items">                
+                <script src='../../javascript/header.js'></script>
+            </div>
+        </nav>
+    </header>
+
+    <div class="header">
+        <h3 class="text-center text-white titulo-indice">ÍNDICE</h3>
+        <ol class="temas">
+            <!-- TEMA 1 MODALIDADES DE OPERACION-->
+            <li class="tema">
+                <a href="../Tema 1/1_1.html" class="tema-indice">Modalidades de operación.</a>
+                <!-- SUBTEMAS-->
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 1/1_1.html" class="tema-indice">
+							              1.1. Modo de dirección real
+						            </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 1/1_2.html" class="tema-indice">
+							              1.2. Modo protegido.
+						            </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- TEMA 2 ORGANIZACION DE LA MEMORIA-->
+            <li class="tema">
+                <a href="../Tema 2/2_1.html" class="tema-indice"> Organización de la memoria. </a>
+
+                <!-- SUBTEMAS -->
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 2/2_1.html" class="tema-indice">
+							              2.1. Segmentos.
+						            </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 2/2_2.html" class="tema-indice">
+                            2.2. Endianess.
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- TEMA 3 REGISTROS DEL PROCESADOR-->
+            <li class="tema">
+                <a href="../Tema 3/3_1.html" class="tema-indice">Registros del procesador</a>
+
+                <!-- SUBTEMAS -->
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 3/3_1.html" class="tema-indice">
+                            3.1. Registros del 8088 y del 8086.
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- TEMA 4 HERRAMIENTAS Y ESTRUCTURA DEL CODIGO-->
+            <li class="tema">
+                <a href="../Tema 4/4_1.html" class="tema-indice">Preparacion para Ensamblador</a>
+
+                <!-- SUBTEMAS -->
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 4/4_1.html" class="tema-indice">
+                            4.1. Herramientas y compilación del código.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 4/4_2.html" class="tema-indice">
+                            4.2. Estructura del codigo.
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- TEMA 5. lENGUAJE ENSAMBLADOR-->
+            <li class="tema">
+                <a href="../Tema 5/5_1.html" class="tema-indice">Ensamblador</a>
+
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 5/5_1.html" class="tema-indice">
+                            5.1. Variables y operadores.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 5/5_2.html" class="tema-indice">
+                            5.2. Instrucciones.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 5/5_3.html" class="tema-indice">
+                            5.3. Conjuntos de instrucciones comunes.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 5/5_4.html" class="tema-indice">
+                            5.4. Códigos.
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+    <div class="main-wrapper"> <!-- MAIN -->
+
+        <article class="blog-post px-3 py-5 p-md-5"> <!-- INICIO ARTICULO -->
+            <div class="container"><!-- CONTENEDOR PRINC-->
+                <header class="blog-post-header"><!-- TIUTLO -->
+                    <h2 class="title mb-2">4.2 Estructura del código</h2> <!-- TEMA PRINCIPAL -->
+                    <div class="meta mb-3"><span class="date">12 de noviembre de 2021</span></div> <!-- FECHA -->
+                </header><!-- FIN TITULO -->
+
+                <p><!-- INTRODUCCION ESTRUCUTRAS-->
+                    Existen dos estructuras que definen la forma en que se escribe el código ensamblador: la estándar y la simplificada. Las principales diferencias entre estas dos estructuras es la forma en la que se definen los segmentos con los que se van a trabajar. Como ya se había mencionado, existen 4 segmentos: de código, de pila, de datos y de extra datos, estos segmentos deben ser definidos al principio del código fuente, en cada segmento se debe indicar lo siguiente:
+                </p>
+
+                <ul class="mb-5">
+                    <li class="mb-2">Segmento de pila: aquí se define el tamaño de la pila para el programa.</li>
+                    <li class="mb-2">Segmento de datos y extra: en estos se definen las variables que se van a usar en el código.</li>
+                    <li class="mb-2">Segmento de código: en este se escribe el código del programa.</li>
+                </ul><!-- FIN INTRODUCCION ESTRUCUTRAS -->
+
+                <h3 class="mt-5 mb-3">Estructura estándar</h3><!-- SUBTEMA 1 -->
+
+                <p><!-- SENTENCIA DE DEFINICION-->
+                    La sentencia para definir un segmento en la estructura estandar es la siguiente:
+                </p>
+                <p class="text-center">
+                  nombe_seg SEGMENT PARA combinación ‘clase’
+                </p>
+                <ul class="mb-5">
+                    <li class="mb-2">nombre_seg: es el nombre que se le quiera dar al segmento.</li>
+                    <li class="mb-2">SEGMENT: palabra reservada para indicar que es un segmento.</li>
+                    <li class="mb-2">PARA: palabra reservada para indicar la alineación del segmento (limtes de segmento).</li>
+                    <li class="mb-2">Combinación: indica el tipo se segmento (pila, datos, etc).</li>
+                    <li class="mb-2">Clase: se usa para hacer referencia a una colección de segmentos.</li>
+                </ul>
+                <p>
+                  Tanto el nombre del segmento como el nombre de la clase son definidos por el programador.
+                </p><!-- FIN SENTENCIA DE DEFINICION-->
+
+                <p><!-- DEFINICION DE SEGMENTOS-->
+                  A continuación, se muestra la definición de los diferentes segmentos segmentos:
+                </p>
+                <h5 class="my-3">Segmento de pila</h5><!-- SEGMENTO DE PILA-->
+                <pre>
+                  <code>
+                            PILA    SEGMENT PARA  STACK 'PILA'
+                              DB 64 DUP(?) ;Tamaño de la pila
+                            PILA ENDS ;Final del segmento
+                  </code>
+                </pre>
+                <p>
+                  En la definición de este segmento se indica el tamaño (64 bytes) de la pila, se le da el nombre “PILA”, se indica que es de tipo “STACK” (pila) y se asigna a la clase ‘PILA’. Todos los segmentos se deben finalizar con “Nombre” ENDS.
+                </p><!-- FIN SEGMENTO DE PILA-->
+
+                <h5 class="my-3">Segmento de datos</h5><!-- SEGMENTO DE DATOS -->
+                <pre>
+                  <code>
+                            DATOS SEGMENT PARA PUBLIC 'DATOS'
+                              msg  DB 'Hola mundo $' ;Variables
+                            DATOS ENDS ;Final del segmento
+                  </code>
+                </pre>
+                <p>
+                  El segmento de datos tiene como nombre “DATOS”, se indica que es público con “PUBLIC” y se asigna a la clase ‘DATOS’, dentro de este se definen todas las variables que se van a usar en el programa, en este caso, solo se tiene la variable “msg”.
+                </p><!-- FIN SEGMENTO DE DATOS-->
+
+                <h5 class="my-3">Segmento de datos</h5><!-- SEGMENTO DE CODIGO-->
+                <pre>
+                  <code>
+                            CODIGO SEGMENT PARA PUBLIC 'CODIGO'
+                                  ASSUME CS:CODIGO, DS:DATOS, ES:DATOS, SS:PILA
+                               main:
+                               ;Aqui va el código
+                            CODIGO ENDS
+                               END main
+                  </code>
+                </pre>
+                <p>
+                  El segmento de código se llama “CODIGO”, se indica que es público con “PUBLIC” y se asigna a la clase ‘CODIGO’, después, es necesario referenciar los segmentos a sus registros de segmento, con esto, se están indicando las direcciones de los segmentos al procesador para que, al momento de utilizarlos, el procesador sepa dónde buscar. Normalmente se sigue el orden anterior en todos los programas: CS con el segmento de código, DS y ES con el segmento de datos y SS con el segmento de pila. Después de ASSUME, se indica la etiqueta “main:” esta etiqueta indica el inicio del código, una vez que ya se escribió todo el código, se indica el final del segmento de código “CODIGO ENDS” y el final de main “END main”.
+                </p><!-- FIN SEGMENTO DE CODIGO-->
+                <p>
+                  Esta estructura es la más “complicada” de las dos, sin embargo, si se quiere mayor control sobre los segmentos, es recomendable usarla.
+                </p><!-- FIN ESTRUCUTRA ESTANDAR-->
+                <h3 class="mt-5 mb-3">Esctructura simplificada</h3><!-- ESTRUCTURA SIMPLIFICADA -->
+                <p>
+                  La estructura simplificada es la siguiente:
+                </p>
+                <pre>
+                  <code>
+                            .MODEL SMALL    ;Se define el Modelo de memoria
+                            .STACK 100h     ;Se define el tamaño de la Pila
+                            .DATA
+                               msg DB "hola mundo $" ;Variables
+                            .CODE
+                              main:
+                              END main
+                  </code>
+                </pre>
+                <p>
+                  Como se puede observar en el código anterior, en la estructura simplificada se define un segmento con un punto (.) seguido del tipo de segmento en inglés (STACK, DATA o CODE) y después las variables necesarias, esta estructura es útil para programas sencillos en los que no se requiere un gran control sobre los segmentos. En esta estructura se añade la directiva “.MODEL”, esto indica el tipo de memoria a utilizar. Hay muchas modelos de memoria, pero que se va a utilizar en esta guía, es el Small, ya que no se requiere más.
+                </p>
+
+                <h5 class="my-3">Lo que hay que recordar:</h5>
+                <ul class="mb-5">
+                    <li class="mb-2">En la estructura estándar siempre se debe poner la directiva ASSUME.</li>
+                    <li class="mb-2">La estructura estándar da mas control sobre los segmentos.</li>
+                    <li class="mb-2">Basta con un punto y el nombre del segmento para definirlo en la estructura simplificada.</li>
+                </ul>
+
+                <nav class="blog-nav nav nav-justified my-5">
+                    <a class="nav-link-prev nav-item nav-link rounded-left" href="4_1.html">Anterior<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
+                    <a class="nav-link-next nav-item nav-link rounded-right" href="../Tema 5/5_1.html">Siguiente<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
+                </nav>
+            </div>
+        </article>
+
+
+        <footer class="footer text-center py-2 theme-bg-dark">
+
+            <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
+            <small class="copyright">Designed with <i class="fas fa-heart" style="color: #fb866a;"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+
+        </footer>
+
+    </div>
+
+    <!-- Javascript -->
+    <script src="assets/plugins/jquery-3.3.1.min.js"></script>
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+</body>

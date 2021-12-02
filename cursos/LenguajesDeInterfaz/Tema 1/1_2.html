@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tema 1. Modalidades de operación</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog Template">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
+    <link rel="shortcut icon" href="../../../solutec.ico">
+
+    <!-- FontAwesome JS-->
+    <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="../../../assets/css/theme-7.css">
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-dark">
+            <a href="../../../index.html"> <img src="../../../assets/images/solutec.png" alt="SoluTec" class="logo-navbar"> </a>
+            <div class="navbar-item" id="nav-items">                
+                <script src='../../javascript/header.js'></script>
+            </div>
+        </nav>
+    </header>
+
+    <div class="header">
+        <h3 class="text-center text-white titulo-indice">ÍNDICE</h3>
+        <ol class="temas">
+            <!-- TEMA 1 MODALIDADES DE OPERACION-->
+            <li class="tema">
+                <a href="../Tema 1/1_1.html" class="tema-indice">Modalidades de operación.</a>
+                <!-- SUBTEMAS-->
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 1/1_1.html" class="tema-indice">
+							              1.1. Modo de dirección real
+						            </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 1/1_2.html" class="tema-indice">
+							              1.2. Modo protegido.
+						            </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- TEMA 2 ORGANIZACION DE LA MEMORIA-->
+            <li class="tema">
+                <a href="../Tema 2/2_1.html" class="tema-indice"> Organización de la memoria. </a>
+
+                <!-- SUBTEMAS -->
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 2/2_1.html" class="tema-indice">
+							              2.1. Segmentos.
+						            </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 2/2_2.html" class="tema-indice">
+                            2.2. Endianess.
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- TEMA 3 REGISTROS DEL PROCESADOR-->
+            <li class="tema">
+                <a href="../Tema 3/3_1.html" class="tema-indice">Registros del procesador</a>
+
+                <!-- SUBTEMAS -->
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 3/3_1.html" class="tema-indice">
+                            3.1. Registros del 8088 y del 8086.
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- TEMA 4 HERRAMIENTAS Y ESTRUCTURA DEL CODIGO-->
+            <li class="tema">
+                <a href="../Tema 4/4_1.html" class="tema-indice">Preparacion para Ensamblador</a>
+
+                <!-- SUBTEMAS -->
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 4/4_1.html" class="tema-indice">
+                            4.1. Herramientas y compilación del código.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 4/4_2.html" class="tema-indice">
+                            4.2. Estructura del codigo.
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- TEMA 5. lENGUAJE ENSAMBLADOR-->
+            <li class="tema">
+                <a href="../Tema 5/5_1.html" class="tema-indice">Ensamblador</a>
+
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 5/5_1.html" class="tema-indice">
+                            5.1. Variables y operadores.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 5/5_2.html" class="tema-indice">
+                            5.2. Instrucciones.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 5/5_3.html" class="tema-indice">
+                            5.3. Conjuntos de instrucciones comunes.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 5/5_4.html" class="tema-indice">
+                            5.4. Códigos.
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+    <div class="main-wrapper"> <!-- MAIN -->
+
+        <article class="blog-post px-3 py-5 p-md-5"> <!-- INICIO ARTICULO -->
+            <div class="container"><!-- CONTENEDOR PRINC-->
+                <header class="blog-post-header"><!-- TIUTLO -->
+                    <h2 class="title mb-2">Modalidades de operacion</h2> <!-- TEMA PRINCIPAL -->
+                    <div class="meta mb-3"><span class="date">12 de noviembre de 2021</span></div> <!-- FECHA -->
+                </header><!-- FIN TITULO -->
+
+                <p><!-- INTRODUCCION A LOS MODOS DE OPERACION -->
+                    El procesador soporta numerosos modos de operación para código x86, sin embargo, no todas las instrucciones están disponibles en estos modos.
+                    Una parte del repertorio de instrucciones de 16bits está disponible en el modo real y en el modo protegido. Si bien, las instrucciones son
+                    similares en cada modo, cada uno de estos da distintas formas de acceso a memoria y así se da lugar a estrategias de programación diferentes.
+                </p><!-- FIN INTRODUCCION -->
+
+                <h2 class="title mb-2">1.2. Modo Protegido</h2><!-- TITULO -->
+
+                <p><!-- INTRODUCCION MODO PROTEGIDO-->
+                    El modo protegido es otro modo operacional de los CPU’s compatibles x86 de la serie 80286 y posteriores.
+                </p><!-- FIN INTRODUCCION SUB1 -->
+                <p>
+                  Las nuevas características añadidas a este modo son la protección de memoria, soporte de hardware para memoria virtual y la conmutación de tarea.
+                </p>
+                <p>
+                  Al igual que el modo real, en este modo se trabaja con segmentos, pero, se trabaja de con un direccionamiento segmentado no lineal, en lugar de direccionamiento lineal. La gran diferencia entre estos dos modos radica en como el microprocesador interpreta la información que se encuentra en los registros de segmento, y esta parte es lo que hace un poco más “complicado” este modo operacional, es por esto, por lo que en esta guía nos enfocaremos solo en el mecanismo del cálculo de la dirección en el modo protegido.
+                </p>
+
+                <h3 class="mt-5 mb-3">Mecanismo de direccionamiento</h3><!-- TITULO SUBTEMA 1 -->
+                <p><!-- INTRODUCCION DIRECCIONAMIENTO-->
+                    Para encontrar un segmento, lo primero que consulta el microprocesador son los registros de segmento y en estos, a diferencia del modo real, ya no se encuentra una dirección, si no, un selector de 16 bits. Un selector indica: el número o índice de descriptor del segmento, la tabla de descriptores donde se buscará el descriptor y el nivel de privilegio del segmento. Por lo que, el reparto de bits seria el siguiente:
+                </p><!-- FIN INTRODUCCION SUB2 -->
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/prote1.png" alt="image"><!-- IMAGEN SEGMENTOS -->
+                </figure><!-- FIN FIGURE -->
+                <p>
+                  Como se ve en la tabla anterior, los bits del 15 al 3 representan el número de descriptor, el bit 2 representa la tabla de descriptores y los bits del 1 al 0 representan el nivel de privilegio. Pongamos un ejemplo:
+                </p>
+
+                <p>
+                  Se quiere conocer la informacion del selector del segmetno CS.
+                </p>
+                <p>
+                  El primer paso es revisar la información que esta en los registros de segmento.
+                </p>
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/prote2.png" alt="image"><!-- IMAGEN SEGMENTOS -->
+                </figure><!-- FIN FIGURE -->
+                <p>
+                  En el registro CS se encuentra el valor hexadecimal 0018h, por lo que este es nuestro selector. Ahora, este selector se debe desglosar:
+                </p>
+                <p>
+                  Primero convertimos el valor hexadecimal a su representación binaria y con esto, obtendremos los datos del selector. Entonces, convertimos 0018h = 0000000000011000b y los escribimos en la tabla.
+                </p>
+
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/prote3.png" alt="image"><!-- IMAGEN TABLA SELECTOR -->
+                </figure><!-- FIN FIGURE -->
+                <p>
+                  Con esto nos damos cuenta que:
+                </p>
+                <ul class="mb-5">
+                    <li class="mb-2">Numero de descriptor = 0000000000011b.</li>
+                    <li class="mb-2">Tabla de descriptores (TI) = 0b</li>
+                    <li class="mb-2">Nivel de privilegio (RPL) = 00b</li>
+                </ul>
+                <p>
+                  Entonces, el segmento de código tiene el descriptor 3, se va a buscar en la tabla de descriptores globales y tiene el mayor nivel de privilegio.
+                </p>
+                <p>
+                  ¿Cómo sabemos que la tabla es de descriptores globales?, ¿Cómo sabemos que tiene el mayor nivel de privilegio? y, ¿Qué es un descriptor?, todo esto se explica a continuación.
+                </p>
+
+                <h3 class="mt-5 mb-3">Descriptores</h3><!-- TITULO DESCRIPTORES -->
+                <p><!-- INTRODUCCION DESCRIPTORES -->
+                    Un descriptor es un numero de 8 bytes que especifica la ubicación, la longitud y los derechos de acceso de un segmento de memoria. Los descriptores se dividen en dos tablas de descriptores:
+                </p>
+                <h5 class="my-3">Tabla de descriptores globales (TI=0)</h5>
+                <p>
+                  Contiene definiciones de segmentos que se aplican a todos los programas, estos descriptores se suelen llamar también descriptores de sistema.
+                </p>
+                <h5 class="my-3">Tabla de descriptores locales (TI=1)</h5>
+                <p>
+                  Estos descriptores generalmente son únicos de las aplicaciones por lo que se les suele llamar también, descriptores de aplicación.
+                </p>
+                <p>
+                  Cada una de estas tablas contiene 8192 descriptores, por lo que en total son 16,384 descriptores disponibles para una aplicación. Como cada descriptor describe un segmento de memoria, se pueden describir hasta 16,384 segmentos de memoria para cada aplicación. A continuación, se muestra el desglose de los descriptores de los procesadores 80286 y del 80386 al Pentium 4.
+                </p>
+
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/prote4.png" alt="image"><!-- IMAGEN DESCRIPTORES -->
+                </figure><!-- FIN FIGURE -->
+                <p>
+                  Otra diferencia con el modo real es que la dirección de desplazamiento pude ser de 24bits (286) o 32bits (386 y posteriores) en lugar de 16bits. Los 32bits dan lugar a la opción de poder direccionar hasta 4GB de longitud.
+                </p>
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/calculo1.png" alt="image"><!-- IMAGEN DIRECCION INICIAL -->
+                </figure><!-- FIN FIGURE -->
+
+                <h5 class="my-3">Desglose del descriptor 80286 y 80386</h5>
+                <ul class="mb-5">
+                    <li class="mb-2">Límite: contiene la última dirección de desplazamiento del segmento.</li>
+                    <li class="mb-2">Base: indica el inicio del segmento de memoria, este es de 24b en el 286 y de 32b desde el 386 hasta el Pentium 4.</li>
+                    <li class="mb-2">Derechos de acceso: controla el acceso al segmento de memoria, define el funcionamiento del segmento en el sistema y permite un control completo sobre el segmento.</li>
+                </ul>
+                <p>
+                  En el descriptor del 386 hasta el Pentium 4, se establecen los bits G, D y AV, lo cuales corresponden a lo siguiente:
+                </p>
+                <ul class="mb-5">
+                    <li class="mb-2">G (bit de granularidad): Si este G=0, el límite especifica un límite de segmento entre 00000H y FFFFF. Si G=1, el valor del límite se multiplica por 4 KB (agregando XXXXH). El límite para G=1 va entonces desde 00000XXXH hasta FFFFFXXXH.</li>
+                    <li class="mb-2">D: indica la forma en que las instrucciones de los microprocesadores 80386 al Pentium II acceden a los registros y a los datos de memoria tanto en modo protegido como en el real. Si D=0, las instrucciones son de 16 bits. Esto significa que las instrucciones utilizan registros y direcciones de desplazamiento de 16 bits en forma predeterminada. Si D=1, las instrucciones son de 32 bits.</li>
+                    <li class="mb-2">AV: es usado por algunos sistemas operativos para indicar que el segmento está disponible (AV=1) o que no lo está (AV=0).</li>
+                </ul>
+                <p>
+                  Estos últimos bits pueden resultar un poco confusos, por lo que también se pueden interpretar de la siguiente manera:
+                </p>
+                <ul class="mb-5">
+                    <li class="mb-2">D = 0 cuando el segmento es de 16bits y D = 1 cuando es de más de 16bits.</li>
+                    <li class="mb-2">AV = 1 si se puede acceder (leer, escribir) y A = 0 si no se puede.</li>
+                    <li class="mb-2">G depende totalmente del límite dado, si este valor hexadecimal termina con 3 efes (FFFh) o si este valor no cabe en 16bits G = 1, en el caso contrario, G = 0 ya que el límite cabe en 16bits.</li>
+                </ul>
+                <p>
+                  Por ejemplo, si el límite es 00001Fh, G = 0 ya que lo que se va a escribir es 001Fh y este valor cabe perfectamente en 16bits, pero, si el valor es 0012FFFFh ó 134BCFh, G = 1 ya que 123BCF y 12FFFF son de 24 bits y estos no caben en 16 bits, por lo que se debe activar la granularidad.
+                </p>
+
+                <h5 class="my-3">Byte de derchos de acceso</h5>
+                <p>
+                  Como ya se mencionó antes, este byte controla el acceso al segmento de memoria, por lo que es bastante importante y está dividido en varias partes.
+                </p>
+                <p>
+                  El byte de derechos de acceso se divide de la siguiente manera
+                </p>
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/prote5.png" alt="image"><!-- IMAGEN DIRECCION REAL -->
+                </figure><!-- FIN FIGURE -->
+
+                <p>
+                  Si bien, lo que representa cada bit ya está descrito, a continuación, se le dará otra interpretación para intentar lograr una mayor comprensión y mencionar algunos detalles:
+                </p>
+                <ul class="mb-5">
+                    <li class="mb-2">P: indica si el segmento está presente o no, normalmente, este bit es 1.</li>
+                    <li class="mb-2">DPL: indica el nivel de privilegio apuntado por el descriptor, donde 0 es el máximo y 3 el mínimo.</li>
+                    <li class="mb-2">S: indica si se trata de un descriptor de sistema o de un descriptor de segmento de código o de datos.</li>
+                </ul>
+                <p>
+                  Los siguientes 3 bits (E, ED/C, R/W), dependen si el descriptor describe un segmento de datos o de código. Empezaremos con el caso del segmento de código.
+                </p>
+                <p>
+                  Cuando el descriptor describe un segmento de código, los bits utilizados y sus valores son los siguientes:
+                </p>
+                <ul class="mb-5">
+                    <li class="mb-2">E: E=1 indicando que se trata de un segmento de código.</li>
+                    <li class="mb-2">C: C = 0 si el segmento se rige por el nivel de privilegio de quien lo llamó, es decir, ignora los bits DPL, por ejemplo, si quien lo llamó tiene un nivel de privilegio de kernel (00), este se comportará con privilegio de kernel, si quien lo llamó tiene un nivel de privilegio de aplicación (11), se comportará con privilegio de aplicación. Normalmente, a estos segmentos se les llaman “conformes” y siempre tienen un DPL = 0.</li>
+                    <li class="mb-2">S: indica si se trata de un descriptor de sistema o de un descriptor de segmento de código o de datos.</li>
+                    <li class="mb-2">R: indica si el segmento se puede leer o no y como es de esperar, un segmento de código nunca se puede escribir.</li>
+                </ul>
+                <p>
+                  Ahora pasemos al caso del segmento de datos, este usa los bits E, ED y W, y su significado es el siguiente:
+                </p>
+                <ul class="mb-5">
+                    <li class="mb-2">E: E=0 indica que se trata de un segmento de datos.</li>
+                    <li class="mb-2">ED: si ED = 0, que es lo normal, indica que el offset debe ser menor o igual que el límite. Si ED = 1, indica que el offset debe ser mayor que el límite.</li>
+                    <li class="mb-2">W: indica si se puede escribir o no, y como es de imaginar, un segmento de datos siempre se puede leer.</li>
+                    <li class="mb-2">A: este bit normalmente se incializa en 0.</li>
+                </ul>
+                <p>
+                  Ahora que ya conocemos todos los significados de los bytes de un descriptor, pongamos un ejemplo:
+                </p>
+                <p>
+                  Defina un descriptor de datos en la entrada 3 de la GDT que tenga base 33500000h y límite 00192FFFh que se pueda leer y escribir y tenga DPL = 0. Indicar cuál es el selector que le corresponde.
+                </p>
+                <p>
+                  Empecemos analizando que información nos dieron en el enunciado:
+                </p>
+                <ul class="mb-5">
+                    <li class="mb-2">Es un descriptor de datos.</li>
+                    <li class="mb-2">Es de GDT (Global Descriptor Table)</li>
+                    <li class="mb-2">La base es 33500000h</li>
+                    <li class="mb-2">El límite es 00192FFFh</li>
+                    <li class="mb-2">Se puede leer</li>
+                    <li class="mb-2">Se pude escribir</li>
+                    <li class="mb-2">Su DPL es 0</li>
+                </ul>
+                <p>
+                  Con esta información, podemos empezar a rellenar la tabla del descriptor, primero completaremos la tabla con valores hexadecimales y después con valores binarios:
+                </p>
+                <p>
+                  Primero, determinemos de cuantos bits es la base para saber de qué microprocesador se trata y cual descriptor debemos usar. La base 35500000h contiene 8 dígitos hexadecimales, por lo que 8x4 = 32, entonces se trata de una base de 32bits, por lo que se trata de un microprocesador 386 y se usará esta tabla:
+                </p>
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/prote6.png" alt="image"><!-- IMAGEN DESCRIPTOR  -->
+                </figure><!-- FIN FIGURE -->
+                <p>
+                  Comencemos escribiendo en el byte 7 del descriptor (bits B31-B24), el byte más significativo de la base, es decir, el 33h. Después, el 50h corresponde al byte 4 (bits B23-B16) y, por último, los bytes restantes de la base (0000h) quedan en los bytes 3 y 2 del descriptor, por lo que la tabla quedaría de la siguiente manera:
+                </p>
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/prote7.png" alt="image"><!-- IMAGEN DESCRIPTOR  -->
+                </figure><!-- FIN FIGURE -->
+                <p>
+                  Continuemos con el límite, ya que este no cabe en 16 bits, y termina en FFFh, el bit G (granularidad) es 1 y el bit D = 1 ya que se están manejando 32bits, los otros dos bits son 0. El byte más significativo del límite es 0, por lo que este se colocara en la otra parte del byte 6 del descriptor (bits L19-L16). Los bytes restantes del límite (0192h), corresponden al byte 1 y 0 del descriptor (bits L15-L0). Entonces, la tabla quedaría de la siguiente manera:
+                </p>
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/prote8.png" alt="image"><!-- IMAGEN DESCRIPTOR  -->
+                </figure><!-- FIN FIGURE -->
+                <p>
+                  En la mitad del byte 6 se coloca Ch ya que los bits G, D, 0 y AV en conjunto son igual a 1100b y la representación hexadecimal de este número es Ch.
+                </p>
+                <p>
+                  Como último paso, queda el byte de derechos de acceso, el cual se desglosará en la tabla en bits en la tabla que se encuentra debajo de la tabla del descriptor y se colocará su representación hexadecimal en esta última.
+                </p>
+                <p>
+                   Comenzando con el bit P = 1 ya que el segmento esta presente, los bits DPL = 00 ya que asi se indica, el bit S = 1 ya que se indica un segmento de datos, el bit E = 0 ya que se describe un segmento de datos, el bit ED = 0 ya que es lo normal en los segmentos de datos y no se indica lo contrario en el enunciado, W = 1 ya que se tienen permisos para escribir y A = 0 ya que este se inicializa en 0. Como resultado, se tiene el numero 10010010b el cual tiene una representacion hexadecimal de 92h, por lo que la tabla quedaria de la siguiente manera:
+                </p>
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/prote9.png" alt="image"><!-- IMAGEN DESCRIPTOR  -->
+                </figure><!-- FIN FIGURE -->
+                <p>
+                   La representación en bits del descriptor seria la siguiente:
+                </p>
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/prote10.png" alt="image"><!-- IMAGEN DESCRIPTOR  -->
+                </figure><!-- FIN FIGURE -->
+                <p>
+                   Esta es la manera en que se forma un descriptor.
+                </p>
+                <p>
+                   Esta forma de representar el un descriptor es la más común, sin embargo, también se puede usar la alternativa que se muestra a continuación:
+                </p>
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/prote11.png" alt="image"><!-- IMAGEN DESCRIPTOR  -->
+                </figure><!-- FIN FIGURE -->
+                <h5 class="my-3">Lo que hay que recordar:</h5>
+                <ul class="mb-5">
+                    <li class="mb-2">La tabla que se debe usar se determina con el tamaño de la base.</li>
+                    <li class="mb-2">El descriptor y el selector son cosas distintas.</li>
+                    <li class="mb-2">El valor que se encuentra en los registros de segmento no es una dirección.</li>
+                    <li class="mb-2">Existen diferencias si el segmento es de código o datos.</li>
+                </ul>
+
+                <nav class="blog-nav nav nav-justified my-5">
+                    <a class="nav-link-prev nav-item nav-link rounded-left" href="1_1.html">Anterior<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
+                    <a class="nav-link-next nav-item nav-link rounded-right" href="../Tema 2/2_1.html">Siguiente<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
+                </nav>
+            </div>
+        </article>
+
+
+        <footer class="footer text-center py-2 theme-bg-dark">
+
+            <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
+            <small class="copyright">Designed with <i class="fas fa-heart" style="color: #fb866a;"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+
+        </footer>
+
+    </div>
+
+    <!-- Javascript -->
+    <script src="assets/plugins/jquery-3.3.1.min.js"></script>
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+</body>

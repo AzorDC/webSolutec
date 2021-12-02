@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tema 3. Registros del procesador</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog Template">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
+    <link rel="shortcut icon" href="../../../solutec.ico">
+
+    <!-- FontAwesome JS-->
+    <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="../../../assets/css/theme-7.css">
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-dark">
+            <a href="../../../index.html"> <img src="../../../assets/images/solutec.png" alt="SoluTec" class="logo-navbar"> </a>
+            <div class="navbar-item" id="nav-items">                
+                <script src='../../javascript/header.js'></script>
+            </div>
+        </nav>
+    </header>
+
+    <div class="header">
+        <h3 class="text-center text-white titulo-indice">ÍNDICE</h3>
+        <ol class="temas">
+            <!-- TEMA 1 MODALIDADES DE OPERACION-->
+            <li class="tema">
+                <a href="../Tema 1/1_1.html" class="tema-indice">Modalidades de operación.</a>
+                <!-- SUBTEMAS-->
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 1/1_1.html" class="tema-indice">
+							              1.1. Modo de dirección real
+						            </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 1/1_2.html" class="tema-indice">
+							              1.2. Modo protegido.
+						            </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- TEMA 2 ORGANIZACION DE LA MEMORIA-->
+            <li class="tema">
+                <a href="../Tema 2/2_1.html" class="tema-indice"> Organización de la memoria. </a>
+
+                <!-- SUBTEMAS -->
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 2/2_1.html" class="tema-indice">
+							              2.1. Segmentos.
+						            </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 2/2_2.html" class="tema-indice">
+                            2.2. Endianess.
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- TEMA 3 REGISTROS DEL PROCESADOR-->
+            <li class="tema">
+                <a href="../Tema 3/3_1.html" class="tema-indice">Registros del procesador</a>
+
+                <!-- SUBTEMAS -->
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 3/3_1.html" class="tema-indice">
+                            3.1. Registros del 8088 y del 8086.
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- TEMA 4 HERRAMIENTAS Y ESTRUCTURA DEL CODIGO-->
+            <li class="tema">
+                <a href="../Tema 4/4_1.html" class="tema-indice">Preparacion para Ensamblador</a>
+
+                <!-- SUBTEMAS -->
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 4/4_1.html" class="tema-indice">
+                            4.1. Herramientas y compilación del código.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 4/4_2.html" class="tema-indice">
+                            4.2. Estructura del codigo.
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- TEMA 5. lENGUAJE ENSAMBLADOR-->
+            <li class="tema">
+                <a href="../Tema 5/5_1.html" class="tema-indice">Ensamblador</a>
+
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 5/5_1.html" class="tema-indice">
+                            5.1. Variables y operadores.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 5/5_2.html" class="tema-indice">
+                            5.2. Instrucciones.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 5/5_3.html" class="tema-indice">
+                            5.3. Conjuntos de instrucciones comunes.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 5/5_4.html" class="tema-indice">
+                            5.4. Códigos.
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+    <div class="main-wrapper"> <!-- MAIN -->
+
+        <article class="blog-post px-3 py-5 p-md-5"> <!-- INICIO ARTICULO -->
+            <div class="container"><!-- CONTENEDOR PRINC-->
+                <header class="blog-post-header"><!-- TIUTLO -->
+                    <h2 class="title mb-2">Registros del procesador</h2> <!-- TEMA PRINCIPAL -->
+                    <div class="meta mb-3"><span class="date">12 de noviembre de 2021</span></div> <!-- FECHA -->
+                </header><!-- FIN TITULO -->
+
+                <p><!-- INTRODUCCION REGISTROS-->
+                    Los registros se encuentran en todos los procesadores y su función es almacenar los valores de datos, comandos, instrucciones o estados. En si un registro es una memoria de alta velocidad y con poca capacidad. Como en esta guía nos estamos enfocando en los procesadores Intel 8086 y 8088 trabajaremos con los registros de estos.
+                </p><!-- FIN INTRODUCCION SEGMENTOS -->
+
+                <h2 class="title mb-2">3.1 Registros del 8088 y 8086</h2><!-- SUBTEMA 1 -->
+
+                <p><!-- INTRODUCCION REGISTROS-->
+                    Tanto el Intel 8088 y 8086 poseen 14 registros de 16 bits, los cuales, se pueden clasificar en tres grupos: Registros de propósito general, registros punteros y de índice y registros de segmento.
+                </p><!-- FIN INTRODUCCION SEGMENTOS -->
+
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/registros.png" alt="image"><!-- IMAGEN TABLA SEGMENTOS -->
+                </figure><!-- FIN FIGURE -->
+
+                <h3 class="mt-5 mb-3">Registros de propósito general</h3>
+                <p>
+                  Estos registros se pueden utilizar de cualquier manera, siempre y cuando esté permitido. Como se ve en la imagen anterior, estos registros están formados por dos registros de 8 bits y estos representan la parte alta (H) y la parte baja (L) del registro en cuestión. Con esta característica, los registros de propósito general pueden ser usados con 16 bits o con 8 bits.
+                </p>
+                <h5 class="my-3">Registro AX (acumulador)</h5>
+                <p>
+                  Utilizado para mantener temporalmente el resultado de alguna operación aritmética o lógica
+                </p>
+                <h5 class="my-3">Registro BX (base)</h5>
+                <p>
+                  Utilizado para mantener la dirección base de un dato que se encuentra en la memoria y también la dirección base de una tabla de datos referenciada por una instrucción (XLAT).
+                </p>
+                <h5 class="my-3">Registro CX (contador)</h5>
+                <p>
+                  Sirve como contador en ciertas instrucciones, tal como contador de corrimientos y rotaciones y como contador de ciclos.
+                </p>
+                <h5 class="my-3">Registro DX (datos)</h5>
+                <p>
+                  Mantiene la parte más significativa del producto después de una multiplicación de 16 bits, del dividendo antes de la división y el número del puerto E/S en una instrucción de E/S.
+                </p>
+
+                <h3 class="mt-5 mb-3">Registros Punteros y de Índice</h3>
+                <p>
+                  Estos registros también forman parte de los registros de propósito general, sin embargo, son más usados como índice o punteros a una localidad de memoria.
+                </p>
+                <ul class="mb-5">
+                    <li class="mb-2">SP (Puntero de pila): se usa para direccionar datos de una pila de memoria.</li>
+                    <li class="mb-2">BP (Puntero de base): utilizado para direccionar un arreglo de datos en la pila.</li>
+                    <li class="mb-2">SI (índice fuente): se utiliza para direccionar datos fuentes indirectamente mediante el uso de instrucciones con cadenas.</li>
+                    <li class="mb-2">DI (índice destino): se usa para direccionar el destino de datos indirectamente para instrucciones con cadenas.</li>
+                    <li class="mb-2">IP (Puntero de instrucción): usado para direccionar la próxima instrucción a ejecutar.</li>
+                    <li class="mb-2">FLAGS (Banderas): también llamado registro de estado, contiene información sobre el estado de operaciones de la unidad aritmética y lógica.</li>
+                </ul>
+                <p>
+                  Las banderas o bits de bandera manejados por el registro de FLAGS son los siguientes:
+                </p>
+                <ul class="mb-5">
+                    <li class="mb-2">C (acarreo): indica un acarreo después de una operación aritmética y es modificado por instrucciones de corrimiento y rotación.</li>
+                    <li class="mb-2">P (Paridad): indica si existe paridad en el resultado de una operación aritmética.</li>
+                    <li class="mb-2">A (acarreo auxiliar): representa un acarreo entre medio-bytes de una operación aritmética o lógica entre registros de 8 bits.</li>
+                    <li class="mb-2">Z (cero): indica que el resultado de una operación aritmética o logia es cero.</li>
+                    <li class="mb-2">S (signo): indica el signo del resultado de una operación aritmética o lógica, si es 1 significa que el signo es negativo.</li>
+                    <li class="mb-2">T (atrapar): hace que el procesador entre en estado de operación paso a paso para depuración.</li>
+                    <li class="mb-2">I (habilitar interrupciones): habilita o deshabilita la terminal INTR, si es 1 esta deshabilitada.</li>
+                    <li class="mb-2">D (dirección): indica si se aumenta o decrementa el índice de los registros DI y SI, si es 0 es incremento.</li>
+                    <li class="mb-2">O (Sobreflujo): se activa si se detecta el “overflow” en una operación aritmética de suma o resta.</li>
+                </ul>
+
+                <h3 class="mt-5 mb-3">Registros de Segmento</h3>
+                <p>
+                  Cada registro de segmento mantiene una porción de 16 bits de la dirección de 20 bits de inicio de segmento de 64KB de memoria. Esta dirección de inicio sirve para identificar los segmentos de la memoria, estos segmentos son: segmento de código, segmento de pila, segmento de datos y segmento extra. Estos registros ya fueron tratados en el subtema “Segmentos” en el tema “Organización de la memoria” de esta guía.
+                </p>
+
+                <h5 class="my-3">Lo que hay que recordar:</h5>
+                <ul class="mb-5">
+                    <li class="mb-2">Los registros de propósito general pueden ser usados a placer del programador, pero, hay que tener siempre en cuenta que algunas instrucciones afectan estos registros, por lo que hay que tener cuidado con los datos almacenados en estos antes de usar una instrucción</li>
+                    <li class="mb-2">Siempre hay que tener un ojo puesto en el registro de banderas, ya que este nos indica si cometimos un error o si obtuvimos el resultado deseado.</li>
+                    <li class="mb-2">Los registros que se usan con más frecuencia en el lenguaje ensamblador son los registros de propósito general y los registros apuntadores. Los demás registros también se usan, pero no con tanta frecuencia.</li>
+                </ul>
+
+                <nav class="blog-nav nav nav-justified my-5">
+                    <a class="nav-link-prev nav-item nav-link rounded-left" href="../Tema 2/2_1.html">Anterior<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
+                    <a class="nav-link-next nav-item nav-link rounded-right" href="../Tema 4/4_1.html">Siguiente<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
+                </nav>
+            </div>
+        </article>
+
+
+        <footer class="footer text-center py-2 theme-bg-dark">
+
+            <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
+            <small class="copyright">Designed with <i class="fas fa-heart" style="color: #fb866a;"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+
+        </footer>
+
+    </div>
+
+    <!-- Javascript -->
+    <script src="assets/plugins/jquery-3.3.1.min.js"></script>
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+</body>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tema 5. Ensamblador</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog Template">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
+    <link rel="shortcut icon" href="../../../solutec.ico">
+
+    <!-- FontAwesome JS-->
+    <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="../../../assets/css/theme-7.css">
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-dark">
+            <a href="../../../index.html"> <img src="../../../assets/images/solutec.png" alt="SoluTec" class="logo-navbar"> </a>
+            <div class="navbar-item" id="nav-items">                
+                <script src='../../javascript/header.js'></script>
+            </div>
+        </nav>
+    </header>
+
+    <div class="header">
+        <h3 class="text-center text-white titulo-indice">ÍNDICE</h3>
+        <ol class="temas">
+            <!-- TEMA 1 MODALIDADES DE OPERACION-->
+            <li class="tema">
+                <a href="../Tema 1/1_1.html" class="tema-indice">Modalidades de operación.</a>
+                <!-- SUBTEMAS-->
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 1/1_1.html" class="tema-indice">
+							              1.1. Modo de dirección real
+						            </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 1/1_2.html" class="tema-indice">
+							              1.2. Modo protegido.
+						            </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- TEMA 2 ORGANIZACION DE LA MEMORIA-->
+            <li class="tema">
+                <a href="../Tema 2/2_1.html" class="tema-indice"> Organización de la memoria. </a>
+
+                <!-- SUBTEMAS -->
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 2/2_1.html" class="tema-indice">
+							              2.1. Segmentos.
+						            </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 2/2_2.html" class="tema-indice">
+                            2.2. Endianess.
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- TEMA 3 REGISTROS DEL PROCESADOR-->
+            <li class="tema">
+                <a href="../Tema 3/3_1.html" class="tema-indice">Registros del procesador</a>
+
+                <!-- SUBTEMAS -->
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 3/3_1.html" class="tema-indice">
+                            3.1. Registros del 8088 y del 8086.
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- TEMA 4 HERRAMIENTAS Y ESTRUCTURA DEL CODIGO-->
+            <li class="tema">
+                <a href="../Tema 4/4_1.html" class="tema-indice">Preparacion para Ensamblador</a>
+
+                <!-- SUBTEMAS -->
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 4/4_1.html" class="tema-indice">
+                            4.1. Herramientas y compilación del código.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 4/4_2.html" class="tema-indice">
+                            4.2. Estructura del codigo.
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- TEMA 5. lENGUAJE ENSAMBLADOR-->
+            <li class="tema">
+                <a href="../Tema 5/5_1.html" class="tema-indice">Ensamblador</a>
+
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 5/5_1.html" class="tema-indice">
+                            5.1. Variables y operadores.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 5/5_2.html" class="tema-indice">
+                            5.2. Instrucciones.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 5/5_3.html" class="tema-indice">
+                            5.3. Conjuntos de instrucciones comunes.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 5/5_4.html" class="tema-indice">
+                            5.4. Códigos.
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+    <div class="main-wrapper"> <!-- MAIN -->
+
+        <article class="blog-post px-3 py-5 p-md-5"> <!-- INICIO ARTICULO -->
+            <div class="container"><!-- CONTENEDOR PRINC-->
+                <header class="blog-post-header"><!-- TIUTLO -->
+                    <h2 class="title mb-2">5.2 Instrucciones</h2> <!-- TEMA PRINCIPAL -->
+                    <div class="meta mb-3"><span class="date">12 de noviembre de 2021</span></div> <!-- FECHA -->
+                </header><!-- FIN TITULO -->
+                <p><!-- INTRODUCCION INSTRUCCIONES-->
+                    Existen diferentes grupos de instrucciones para los Intel 8088/8086/80286, estos son:
+                </p><!-- FIN INTRODUCCION INSTRUCCIONES-->
+
+                <h3 class="mt-5 mb-3">Instrucciones de transeferencia de datos</h3><!--  TRANSFERENCIA-->
+                <p>
+                    Mueven información entre registros y localidades de memoria o puertos E/S.
+                </p>
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/transferencia.png" alt="image"><!-- IMAGEN TABLA DIRECTIVAS -->
+                </figure><!-- FIN FIGURE -->
+                <!--  FIN TRANSFERENCIA-->
+
+                <h3 class="mt-5 mb-3">Instrucciones artiméticas</h3><!--  ARITMETICAS-->
+                <p>
+                    Usadas para operaciones de suma, resta, multiplicación y división.
+                </p>
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/aritmeticas.png" alt="image"><!-- IMAGEN TABLA DIRECTIVAS -->
+                </figure><!-- FIN FIGURE -->
+                <!-- FIN ARITMETICAS-->
+
+                <h3 class="mt-5 mb-3">Manipulación de bits</h3><!--  MANIPULACION-->
+                <p>
+                    Usadas para operaciones de corrimiento, rotación y lógicas.
+                </p>
+                <h5 class="my-3">Lógicas</h5>
+                <p>
+                    A diferencia de los operadores lógicos, las instrucciones pueden manejar registros y operandos a memoria.
+                </p>
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/logicas.png" alt="image"><!-- IMAGEN TABLA DIRECTIVAS -->
+                </figure><!-- FIN FIGURE -->
+                <h5 class="my-3">Corrimiento</h5>
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/icorrimiento.png" alt="image"><!-- IMAGEN TABLA DIRECTIVAS -->
+                </figure><!-- FIN FIGURE -->
+                <!-- FIN MANIPULACION-->
+
+                <h3 class="mt-5 mb-3">Transferencia de control</h3><!--  TRANSFERENCIA CONTROL-->
+                <p>
+                    Altera el orden de ejecución de un programa, aquí se encuentran las instrucciones de salto y llamadas a procedimientos.
+                </p>
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/transfer_control.png" alt="image"><!-- IMAGEN TABLA DIRECTIVAS -->
+                </figure><!-- FIN FIGURE -->
+                <h5 class="my-3">Transfer de control condicional</h5>
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/transfer_condicion.png" alt="image"><!-- IMAGEN TABLA DIRECTIVAS -->
+                </figure><!-- FIN FIGURE -->
+                <!-- FIN TRANSFERENCIA CONTROL-->
+
+                <h3 class="mt-5 mb-3">Manejo de cadenas</h3><!--  CADENAS-->
+                <p>
+                    Usadas para el manejo de las cadenas
+                </p>
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/cadenas.png" alt="image"><!-- IMAGEN TABLA DIRECTIVAS -->
+                </figure><!-- FIN FIGURE -->
+                <!-- FIN CADENAS-->
+
+                <h3 class="mt-5 mb-3">Instrucciones del control del procesador</h3><!--  CONTROL PROCESADOR-->
+                <p>
+                    Activan y desactivan indicadores de estado (banderas) y cambian el estado de ejecución del microprocesador.
+                </p>
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="img/procesador.png" alt="image"><!-- IMAGEN TABLA DIRECTIVAS -->
+                </figure><!-- FIN FIGURE -->
+                <!-- FIN CONTROL PROCESADOR-->
+
+                <h5 class="my-3">Lo que hay que recordar:</h5>
+                <ul class="mb-5">
+                    <li class="mb-2">Se debe tener en cuenta que valores estan en los registros antes de usar una instruccion ya que estas interactúan con los registros y pueden sobreescribir los valores que se encuetran en estos.</li>
+                    <li class="mb-2">Normalmente, cuando se usan instrucciones de cadenas, la cadena que se va a manipular debe ser apuntada.</li>
+                    <li class="mb-2">Para los saltos condicionales, se debe ejecutar una instruccion que modifique las banderas antes de ejecutar la instruccion de salto.</li>
+                </ul>
+
+                <nav class="blog-nav nav nav-justified my-5">
+                    <a class="nav-link-prev nav-item nav-link rounded-left" href="5_1.html">Anterior<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
+                    <a class="nav-link-next nav-item nav-link rounded-right" href="5_3.html">Siguiente<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
+                </nav>
+            </div>
+        </article>
+
+
+        <footer class="footer text-center py-2 theme-bg-dark">
+
+            <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
+            <small class="copyright">Designed with <i class="fas fa-heart" style="color: #fb866a;"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+
+        </footer>
+
+    </div>
+
+    <!-- Javascript -->
+    <script src="assets/plugins/jquery-3.3.1.min.js"></script>
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+</body>

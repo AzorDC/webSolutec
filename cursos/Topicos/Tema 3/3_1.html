@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tema 3. Programación concurrente (MultiHilos).</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog Template">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
+    <link rel="shortcut icon" href="../../../solutec.ico">
+
+    <!-- FontAwesome JS-->
+    <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="../../../assets/css/theme-7.css">
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-dark">
+            <a href="../../../index.html"> <img src="../../../assets/images/solutec.png" alt="SoluTec" class="logo-navbar"> </a>
+            <div class="navbar-item" id="nav-items">                
+                <script src='../../javascript/header.js'></script>
+            </div>
+        </nav>
+    </header>
+
+    <div class="header">
+        <h3 class="text-center text-white titulo-indice">ÍNDICE</h3>
+        <ol class="temas">
+            <!-- TEMA 1 INTERFAZ GRAFICA-->
+            <li class="tema">
+                <a href="../Tema 1/1_1.html" class="tema-indice">Interfaz grafica de usuario</a>
+                <!-- SUBTEMAS-->
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 1/1_1.html" class="tema-indice">
+							              1.1. Creacion de Interfaz grafica
+						            </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 1/1_2.html" class="tema-indice">
+							              1.2. Tipos de evento
+						            </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 1/1_3.html" class="tema-indice">
+							              1.3. Manejo de eventos
+						            </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 1/1_4.html" class="tema-indice">
+							              1.4. Manejo de componentes graficos de control
+						            </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- TEMA 2 Componentes y librerias-->
+            <li class="tema">
+                <a href="../Tema 2/2_1.html" class="tema-indice">Componentes y librerías.  </a>
+
+                <!-- SUBTEMAS -->
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 2/2_1.html" class="tema-indice">
+                            2.1 Definición conceptual de componentes,
+                            paquetes / librerías.
+						            </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 2/2_2.html" class="tema-indice">
+                            2.2 Creación y uso de paquetes/librerías
+                            definidas por el usuario. 
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- TEMA 3 REGISTROS DEL PROCESADOR-->
+            <li class="tema">
+                <a href="./3_1.html" class="tema-indice">Programación concurrente (MultiHilos). </a>
+
+                <!-- SUBTEMAS -->
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 3/3_1.html" class="tema-indice">
+                            3.1. Concepto de hilo.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 3/3_2.html" class="tema-indice">
+                            3.2. Sincronización de hilos computación
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- TEMA 4 HERRAMIENTAS Y ESTRUCTURA DEL CODIGO-->
+            <li class="tema">
+                <a href="../Tema 4/4_1.html" class="tema-indice">Acceso a datos. </a>
+
+                <!-- SUBTEMAS -->
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 4/4_1.html" class="tema-indice">
+                            4.1. Conexión a origen de datos.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 4/4_2.html" class="tema-indice">
+                            4.2. Manipulación de datos.
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+    <div class="main-wrapper"> <!-- MAIN -->
+
+        <article class="blog-post px-3 py-5 p-md-5"> <!-- INICIO ARTICULO -->
+            <div class="container"><!-- CONTENEDOR PRINC-->
+                <header class="blog-post-header"><!-- TIUTLO -->
+                    <h2 class="title mb-2">Concepto de hilo.</h2> <!-- TEMA PRINCIPAL -->
+                    <div class="meta mb-3"><span class="date">20 de noviembre de 2021</span></div> <!-- FECHA -->
+                </header><!-- FIN TITULO -->
+
+                <h2 class="title mb-2">Introduccion</h2>
+                <p>En un S.O tradicional. Cada proceso tiene un espacio de direcciones y un único hilo  de control
+                    Este modelo de programación, en el que se ejecuta un solo hilo, es en el que estamos acostumbrados a trabajar habitualmente.
+                </p>
+
+                <h2 class="title mb-2"> estados de un hilo</h2><!-- SUBTEMA 1 -->
+                <p><!-- INTRODUCCION -->
+                    <ul>
+                        <li>NUEVO.- El hilo ha sido creado pero aun no ha sido activado. Cuando se active pasará al estado preparado. </li>
+                        <li>PREPARADO.- El hilo está activado y le ha sido asignada la UCP.</li>
+                        <li>EN EJECUCIÓN.- El hilo está activo y le ha sido asignada la UCP(solo hilo activos  preparados solo pueden ser ejecutados).</li>
+                        <li>BLOQUEADO.- El hilo espera que otro elimine el bloqueo de un hilo bloqueado.</li>
+                        <li>DORMIDO. -El  hilo está bloqueado durante una cantidad de tiempo determinada después de la cual despertará y pasará al estado preparado.</li>
+                        <li>ESPERANDO.-El hilo está esperando que ocurra alguna cosa o una condicion</li>
+                        <li>MUERTO.-El hilo ha finalizado</li>
+                    </ul>
+                </p><!-- FIN INTRODUCCION -->
+
+                <h2 class="title mb-2">Cuando crear un hilo</h2><!-- SUBTEMA 1 -->
+
+                <p><!-- INTRODUCCION SUB1-->
+                    el S.O crea un hilo primario.Para muchos procesos éste es el único hilo necesario.
+Sin embargo,un proceso puede crear otros hilos para ayudarse en su trabajo,utilizando la UCP al máximo posible.
+                </p><!-- FIN INTRODUCCION SUB1 -->
+
+                <h3 class="mt-5 mb-3">Crear un hilo</h3><!-- TITULO SUBTEMA 2 -->
+                <p><!-- INTRODUCCION SEGMENTACION-->
+                    Esta es una jerarquia que se puede usar para que se vayan guardando los archivos de esta manera /X/Y/Z, donde ... especifica la ruta a los directorios específicos.
+                </p><!-- FIN INTRODUCCION SUB2 -->
+                
+                <h3 class="mt-5 mb-3">ENCONTRAR PAQUETES Y CLASSPATH:</h3><!-- TITULO SUBTEMA 2 -->
+                <p>
+                    ¿Cómo sabe el sistema en tiempo de ejecución  de java dónde buscar los paquetes que usted creó? La respuesta tiene dos partes. Primero, por defecto: el sistema de tiempo de ejecución de java busca en el directorio un curso como su punto de partida.
+                    Segundo, puede especificar una ruta o rutas de directorios colocando la variable ambiental CLASSPATH.   
+                </p>
+
+                <h3 class="mt-5 mb-3">EJEMPLO BREVE DE UN PAQUETE:</h3><!-- TITULO SUBTEMA 2 -->
+                <p>
+                    public class Thread extends Object implements Runnable</p>
+
+                    <p>{</p>
+
+                        <p>//Atributos </p>
+
+                        <p>static int MAX_PRIORITY;</p>
+
+                        <p>//Prioridad máxima que un hilo puede tener.</p>
+
+                        <p>static int MIN_PRIORITY;</p>
+
+                        <p>//Prioridad mínima que un hilo puede tener. </p>
+
+                        <p>static int NORM_PRIORITY;</p>
+
+                        <p>//Prioridad asignada por omisión a un hilo.</p>
+
+                        <p>//Constructores </p>
+
+                        <p>Thread ([argumentos])</p>
+
+                        <p>//Métodos </p>
+
+                        <p>static Theread currentThread()</p>
+
+                        <p>//Devuelve una referencia al hilo que actualmente esta en ejecución. </p>
+
+                        <p>long getID()</p>
+
+                        <p>//Devuelve el identificador del hilo.</p>
+
+                        <p>String getName()</p>
+
+                        <p>//Devuelve el nombre del hilo.</p>
+
+                        <p>int getPriority()</p>
+
+                        <p>//Devuelve la prioridad del hilo. </p>
+
+                        <p>void interrupt()</p>
+
+                        <p>//Envía este hilo al estado de preparado.</p>
+
+                        <p>boolean isAlive()</p>
+
+                        <p>//Verifica sí este hilo está vivo (no ha terminado).</p>
+
+                        <p>boolean isDaemon()</p>
+
+                        <p>//Verifica sí este hilo es un demonio. Se da este nombre  a</p>
+
+                        <p>//un hilo se ejecuta en segundo plano, realizando una </p>
+
+                        <p>//operación específica en tiempos predefinidos, o bien en</p>
+
+                        <p>//respuestas a ciertos eventos.</p>
+
+                        <p>boolean is Interrupted()</p>
+
+                        <p>//Verifica si este hilo ha sido interrumpido.</p>
+
+                        <p>void join([milisegundos[. nanosegundos]])</p>
+
+                        <p>//Espera indefinidamente o el tiempo especificado,a que este</p>
+
+                        <p>//hilo termine (a que muera).</p>
+
+                        <p>void run()</p>
+
+                        <p>//Contiene el código que es ejecutará cuando el hilo pase</p>
+
+                        <p>//al estado de ejecución.Por omisión no hace nada.</p>
+
+                        <p>void setDaemon(boolean on)</p>
+
+                        <p>//Define este hilo como un demonio o como un hilo de usuario.</p>
+
+                        <p>void setName(String nombre)</p>
+
+                        <p>//Cambia el nombre de este hilo.</p>
+
+                        <p>void setPriority(int nuevaPrioridad)</p>
+
+                        <p>//Cambia la prioridad de este hilo.Por omisión es normal</p>
+
+                        <p>//(NORM_PRIORITY).</p>
+
+                        <p>static void sleep(long milisegundos[,int nanosegundos])</p>
+
+                        <p>//Envía este hilo a dormir  por el tiempo especificado.</p>
+
+                        <p>void start()</p>
+
+                        <p>//Inicia la ejecución de este hilo:la máquina virtual de Java</p>
+
+                        <p>//invoca al método run de este hilo.</p>
+
+                        <p>static void yield()</p>
+
+                        <p>//Detiene temporalmente la ejecución de este hilo para</p>
+
+                        <p>//permitir la ejecución de otros.</p>
+
+                        <p>//Métodos heredados de la clase Object:notify,notifyAll y wait void notify()</p>
+
+                        <p>//Despierta un hilo de los que están esperando por el</p>
+
+                        <p>//monitor de este objeto.</p>
+
+                        <p>void notifyAll()</p>
+
+                        <p>//Despierta todos los hilos que están esperando por el</p>
+
+                        <p>//monitor de este objeto.</p>
+
+                        <p>void wait ([milisegundos[,nanosegundos]])</p>
+
+                        <p>//Envía este hilo al estado de espera hasta que otro hilo</p>
+
+                        <p>//invoque al método notify o notifyAll,o hasta que transcurra</p>
+
+                        <p>//el tiempo especificado.</p>
+
+                        <p>}</p>
+                <!-- FIN  -->
+
+
+
+                
+
+                
+                <nav class="blog-nav nav nav-justified my-5">
+                    <a class="nav-link-prev nav-item nav-link rounded-left" href="../Tema 2/2_2.html">Anterior<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
+                    <a class="nav-link-next nav-item nav-link rounded-right" href="./3_2.html">Siguiente<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
+                </nav>
+            </div>
+        </article>
+
+
+        <footer class="footer text-center py-2 theme-bg-dark">
+
+            <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
+            <small class="copyright">Designed with <i class="fas fa-heart" style="color: #fb866a;"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+
+        </footer>
+
+    </div>
+
+    <!-- Javascript -->
+    <script src="assets/plugins/jquery-3.3.1.min.js"></script>
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+</body>

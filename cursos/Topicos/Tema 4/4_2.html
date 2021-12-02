@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tema 4. Acceso a datos.</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog Template">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
+    <link rel="shortcut icon" href="../../../solutec.ico">
+
+    <!-- FontAwesome JS-->
+    <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="../../../assets/css/theme-7.css">
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-dark">
+            <a href="../../../index.html"> <img src="../../../assets/images/solutec.png" alt="SoluTec" class="logo-navbar"> </a>
+            <div class="navbar-item" id="nav-items">                
+                <script src='../../javascript/header.js'></script>
+            </div>
+        </nav>
+    </header>
+
+    <div class="header">
+        <h3 class="text-center text-white titulo-indice">ÍNDICE</h3>
+        <ol class="temas">
+            <!-- TEMA 1 INTERFAZ GRAFICA-->
+            <li class="tema">
+                <a href="../Tema 1/1_1.html" class="tema-indice">Interfaz grafica de usuario</a>
+                <!-- SUBTEMAS-->
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 1/1_1.html" class="tema-indice">
+							              1.1. Creacion de Interfaz grafica
+						            </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 1/1_2.html" class="tema-indice">
+							              1.2. Tipos de evento
+						            </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 1/1_3.html" class="tema-indice">
+							              1.3. Manejo de eventos
+						            </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 1/1_4.html" class="tema-indice">
+							              1.4. Manejo de componentes graficos de control
+						            </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- TEMA 2 Componentes y librerias-->
+            <li class="tema">
+                <a href="../Tema 2/2_1.html" class="tema-indice">Componentes y librerías.  </a>
+
+                <!-- SUBTEMAS -->
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 2/2_1.html" class="tema-indice">
+                            2.1 Definición conceptual de componentes,
+                            paquetes / librerías.
+						            </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 2/2_2.html" class="tema-indice">
+                            2.2 Creación y uso de paquetes/librerías
+                            definidas por el usuario. 
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- TEMA 3 REGISTROS DEL PROCESADOR-->
+            <li class="tema">
+                <a href="../Tema 3/3_1.html" class="tema-indice">Programación concurrente (MultiHilos). </a>
+
+                <!-- SUBTEMAS -->
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 3/3_1.html" class="tema-indice">
+                            3.1. Concepto de hilo.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 3/3_2.html" class="tema-indice">
+                            3.2. Sincronización de hilos computación
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- TEMA 4 HERRAMIENTAS Y ESTRUCTURA DEL CODIGO-->
+            <li class="tema">
+                <a href="./4_1.html" class="tema-indice">Acceso a datos. </a>
+
+                <!-- SUBTEMAS -->
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 4/4_1.html" class="tema-indice">
+                            4.1. Conexión a origen de datos.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 4/4_2.html" class="tema-indice">
+                            4.2. Manipulación de datos.
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+    <div class="main-wrapper"> <!-- MAIN -->
+
+        <article class="blog-post px-3 py-5 p-md-5"> <!-- INICIO ARTICULO -->
+            <div class="container"><!-- CONTENEDOR PRINC-->
+                <header class="blog-post-header"><!-- TIUTLO -->
+                    <h2 class="title mb-2">Manipulación de datos.</h2> <!-- TEMA PRINCIPAL -->
+                    <div class="meta mb-3"><span class="date">20 de noviembre de 2021</span></div> <!-- FECHA -->
+                </header><!-- FIN TITULO -->
+
+                <h2 class="title mb-2">Introduccion</h2>
+                <p>Lenguaje de Manipulación de Datos (Data Manipulation Language, DML) es un idioma proporcionado por los sistemas gestores de bases de datos que permite a los usuarios de la misma llevar a cabo las tareas de consulta o modificación de los datos contenidos en las Bases de Datos del Sistema Gestor de Bases de Datos. El lenguaje de manipulación de datos más popular hoy día es SQL, usado para recuperar y manipular datos en una base de datos relacional. Otros ejemplos de DML son los usados por bases de datos IMS/DL1, CODASYL u otras.</p>
+
+                <h2 class="title mb-2"> Clasificación de los DML</h2><!-- SUBTEMA 1 -->
+                <p><!-- INTRODUCCION -->
+                    Se clasifican en dos grandes grupos:
+lenguajes de consulta procedimentales
+Lenguajes procedimentales. En este tipo de lenguaje el usuario da instrucciones al sistema para que realice una serie de procedimientos u operaciones en la base de datos para calcular un resultado final.
+lenguajes de consulta no procedimentales
+En los lenguajes no procedimentales el usuario describe la información deseada sin un procedimiento específico para obtener esa información.
+
+                </p><!-- FIN INTRODUCCION -->
+
+                <h2 class="title mb-2">Lenguaje de manipulación de datos (DML)</h2>
+                <p>
+                    Un lenguaje de manipulación de datos (Data Manipulation Language, o DML en inglés) es un lenguaje proporcionado por el sistema de gestión de base de datos que permite a los usuarios llevar a cabo las tareas de consulta o manipulación de los datos, organizados por el modelo de datos adecuado.
+
+El lenguaje de manipulación de datos más popular hoy día es SQL, usado para recuperar y manipular datos en una base de datos relacional. Otros ejemplos de DML son los usados por bases de datos IMS/DL1, CODASYL u otras.
+
+                </p>
+                <!-- FIN  -->
+
+
+
+                
+
+                
+                <nav class="blog-nav nav nav-justified my-5">
+                    <a class="nav-link-prev nav-item nav-link rounded-left" href="../Tema 4/4_1.html">Anterior<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
+                </nav>
+            </div>
+        </article>
+
+
+        <footer class="footer text-center py-2 theme-bg-dark">
+
+            <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
+            <small class="copyright">Designed with <i class="fas fa-heart" style="color: #fb866a;"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+
+        </footer>
+
+    </div>
+
+    <!-- Javascript -->
+    <script src="assets/plugins/jquery-3.3.1.min.js"></script>
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+</body>

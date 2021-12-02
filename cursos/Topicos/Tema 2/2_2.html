@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tema 2. Componentes y librerias</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog Template">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
+    <link rel="shortcut icon" href="../../../solutec.ico">
+
+    <!-- FontAwesome JS-->
+    <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="../../../assets/css/theme-7.css">
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-dark">
+            <a href="../../../index.html"> <img src="../../../assets/images/solutec.png" alt="SoluTec" class="logo-navbar"> </a>
+            <div class="navbar-item" id="nav-items">                
+                <script src='../../javascript/header.js'></script>
+            </div>
+        </nav>
+    </header>
+
+    <div class="header">
+        <h3 class="text-center text-white titulo-indice">ÍNDICE</h3>
+        <ol class="temas">
+            <!-- TEMA 1 INTERFAZ GRAFICA-->
+            <li class="tema">
+                <a href="../Tema 1/1_1.html" class="tema-indice">Interfaz grafica de usuario</a>
+                <!-- SUBTEMAS-->
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 1/1_1.html" class="tema-indice">
+							              1.1. Creacion de Interfaz grafica
+						            </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 1/1_2.html" class="tema-indice">
+							              1.2. Tipos de evento
+						            </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 1/1_3.html" class="tema-indice">
+							              1.3. Manejo de eventos
+						            </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 1/1_4.html" class="tema-indice">
+							              1.4. Manejo de componentes graficos de control
+						            </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- TEMA 2 Componentes y librerias-->
+            <li class="tema">
+                <a href="../Tema 2/2_1.html" class="tema-indice">Componentes y librerías.  </a>
+
+                <!-- SUBTEMAS -->
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 2/2_1.html" class="tema-indice">
+                            2.1 Definición conceptual de componentes,
+                            paquetes / librerías.
+						            </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 2/2_2.html" class="tema-indice">
+                            2.2 Creación y uso de paquetes/librerías
+                            definidas por el usuario. 
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- TEMA 3 REGISTROS DEL PROCESADOR-->
+            <li class="tema">
+                <a href="../Tema 3/3_1.html" class="tema-indice">Programación concurrente (MultiHilos). </a>
+
+                <!-- SUBTEMAS -->
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="./3_1.html" class="tema-indice">
+                            3.1. Concepto de hilo.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./3_2.html" class="tema-indice">
+                            3.2. Sincronización de hilos computación
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- TEMA 4 HERRAMIENTAS Y ESTRUCTURA DEL CODIGO-->
+            <li class="tema">
+                <a href="../Tema 4/4_1.html" class="tema-indice">Acceso a datos. </a>
+
+                <!-- SUBTEMAS -->
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 4/4_1.html" class="tema-indice">
+                            4.1. Conexión a origen de datos.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 4/4_2.html" class="tema-indice">
+                            4.2. Manipulación de datos.
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+            <!-- TEMA 4 HERRAMIENTAS Y ESTRUCTURA DEL CODIGO-->
+            <li class="tema">
+                <a href="../Tema 4/4_1.html" class="tema-indice">Acceso a datos. </a>
+
+                <!-- SUBTEMAS -->
+                <ul class="lista-subtema">
+                    <li>
+                        <a href="../Tema 4/4_1.html" class="tema-indice">
+                            4.1. Conexión a origen de datos.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Tema 4/4_2.html" class="tema-indice">
+                            4.2. Manipulación de datos.
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+    <div class="main-wrapper"> <!-- MAIN -->
+
+        <article class="blog-post px-3 py-5 p-md-5"> <!-- INICIO ARTICULO -->
+            <div class="container"><!-- CONTENEDOR PRINC-->
+                <header class="blog-post-header"><!-- TIUTLO -->
+                    <h2 class="title mb-2">Creación y uso de paquetes/librerías
+                        definidas por el usuario.</h2> <!-- TEMA PRINCIPAL -->
+                    <div class="meta mb-3"><span class="date">20 de noviembre de 2021</span></div> <!-- FECHA -->
+                </header><!-- FIN TITULO -->
+
+                <h2 class="title mb-2">Introduccion</h2>
+                <p>Los paquetes son grupos de clases relacionadas; ayudan a organizar su código y proporcionan otra capa encapsulamiento.
+                    En programación, los paquetes, con frecuencia son útiles para agrupar las piezas relacionadas de un programa.
+                    Un paquete sirve para dos propósitos: primero, suministra un mecanismo por el cual piezas relacionadas de un programa pueden ser organizadas como una unidad. Se debe tener acceso a las clases definidas dentro de un paquete a través de su nombre de paquete.</p>
+
+                <h2 class="title mb-2"> Componente</h2><!-- SUBTEMA 1 -->
+                <p><!-- INTRODUCCION -->
+                    Un componente es el elemento básico de una interfaz gráfica. Los componentes permiten al usuario interactuar con la aplicación y proporcionar información desde el programa al usuario sobre el estado de la aplicación. Ejemplos de componentes son: los botones, las barras de desplazamiento, las etiquetas, las listas, las cajas de selección o los campos de texto, entre otros. Cabe mencionar que los componentes nunca se encuentran de forma aislada, sino agrupados dentro de contenedores.
+                </p><!-- FIN INTRODUCCION -->
+
+                <h2 class="title mb-2"> DEFINIR UN PAQUETE:</h2><!-- SUBTEMA 1 -->
+
+                <p><!-- INTRODUCCION SUB1-->
+                    Todas las clases en Java pertenecen a algún paquete, cuando no se especifica la declaración  package se usa el paquete predeterminado
+                    , el paquete predeterminado no tiene nombre, lo que lo hace transparente. 
+                    Para crear un paquete, coloque un comando package en la parte superior del archivo fuente de java.
+                    Las clases declaradas dentro de ese archivo pertenecerán al paquete específicado.
+                    La siguiente es la forma general de la declaración package:
+                    package pkg;
+                    Aquí, pkg es el nombre del paquete. Por ejemplo, el siguiente enunciado crea un paquete de nombre Project1.
+                    <u> package Project1;</u>
+                </p><!-- FIN INTRODUCCION SUB1 -->
+
+                <p>Java usa el sistema de archivo para manejar los paquetes con cada paquete almacenado en su propio directorio. Por ejemplo, los archivos .class para las clases que usted declare sean partes de Project1 debe guardarse en un directorio llamado Project1.</p>
+
+
+                <h3 class="mt-5 mb-3">paquete x.y.z;</h3><!-- TITULO SUBTEMA 2 -->
+                <p><!-- INTRODUCCION SEGMENTACION-->
+                    Esta es una jerarquia que se puede usar para que se vayan guardando los archivos de esta manera /X/Y/Z, donde ... especifica la ruta a los directorios específicos.
+                </p><!-- FIN INTRODUCCION SUB2 -->
+                
+                <h3 class="mt-5 mb-3">ENCONTRAR PAQUETES Y CLASSPATH:</h3><!-- TITULO SUBTEMA 2 -->
+                <p>
+                    ¿Cómo sabe el sistema en tiempo de ejecución  de java dónde buscar los paquetes que usted creó? La respuesta tiene dos partes. Primero, por defecto: el sistema de tiempo de ejecución de java busca en el directorio un curso como su punto de partida.
+                    Segundo, puede especificar una ruta o rutas de directorios colocando la variable ambiental CLASSPATH.   
+                </p>
+
+                <h3 class="mt-5 mb-3">EJEMPLO BREVE DE UN PAQUETE:</h3><!-- TITULO SUBTEMA 2 -->
+                <p >
+                    //Demostración del uso de un paquete</p>
+<p>package BookPack;</p>
+<p>class Book{</p>
+       <p> String title;</p>
+       <p> String author;</p>
+       <p>private int pubDate;</p>
+       <p>Book (String t, String a, int d){</p>
+        <p>title= t;</p>
+        <p>author= a;</p>
+        <p>pubDate= d;</p>
+        <p>}</p>
+        <p>void show( ) {</p>
+            <p>System.out.println (title);</p>
+            <p>System.out.println (author);</p>
+            <p>System.out.println (pubDate);</p>
+            <p>System.out.println ( );</p>
+            <p>}</p>
+            <p>}</p>
+
+            <p>class BookDemo {</p>
+                <p>public static void main ( String args[ ] ){</p>
+                    <p>Book book [ ] = new Book [5];</p>
+                    <p>book[0] = new Book ("java Beginner´s Guide", "Schildt", 2001);</p>
+                    <p>book[1] = new Book ("java 2 programer´s Reference", "Schildt", 2000);</p>
+                    <p>book[2] = new Book ("HTML Programer´s Reference", "Powell and Whitworth", 1998);</p>
+                    <p>book[3] = new Book ("Red Storm Rising", "Clancy", 1986);</p>
+                    <p>book[4] = new Book ("On the Road", "Kerouac", 1955);</p>
+                    <p>for (int i=0; i < book.length; i++)  book[ i ].show( );</p>
+                    <p>}</p>
+                    <p>}
+                </p>
+
+                <h2 class="title mb-2"> PAQUETES Y ACCESO A MIEMBROS</h2><!-- SUBTEMA 1 -->
+
+                <p><!-- INTRODUCCION SUB1-->
+                    La visibilidad de un elemento está determinada por su especificación de accesos, private, public. protected o por defecto, y el paquete en el que éste resida.De este modo, la visibilidad de un elemento está determinada por su visibilidad dentro de la clase y su visibilidad dentro del paquete.
+Si un miembro de una clase no tiene especificador de acceso explícito, entonces éste sería visible desde dentro de su paquete pero no por fuera de él. Por esto debe usar como la especificación de acceso por defecto para los elementos que quiera mantener como privados en un paquete, pero |público| dentro de ese paquete.
+Los miembros declarados public explícitamente son visibles en todas partes, incluidas en clases y paquetes diferentes. No hay restricción en su uso o acceso.
+                </p><!-- FIN INTRODUCCION SUB1 -->
+
+                <figure class="blog-banner text-center"><!-- FIGURE PARA IMAGEN -->
+                    <img class="img-fluid" src="../img/tabla_librerias.png" alt="image"><!-- IMAGEN TABLA SEGMENTOS -->
+                </figure><!-- FIN FIGURE -->
+                <!-- FIN  -->
+
+
+
+                
+
+                
+                <nav class="blog-nav nav nav-justified my-5">
+                    <a class="nav-link-prev nav-item nav-link rounded-left" href="../Tema 2/2_1.html">Anterior<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
+                    <a class="nav-link-next nav-item nav-link rounded-right" href="../Tema 3/3_1.html">Siguiente<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
+                </nav>
+            </div>
+        </article>
+
+
+        <footer class="footer text-center py-2 theme-bg-dark">
+
+            <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
+            <small class="copyright">Designed with <i class="fas fa-heart" style="color: #fb866a;"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+
+        </footer>
+
+    </div>
+
+    <!-- Javascript -->
+    <script src="assets/plugins/jquery-3.3.1.min.js"></script>
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+</body>
